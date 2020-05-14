@@ -1,0 +1,12 @@
+[submodule ".config/zsh/plugins/zsh-vim-mode"]
+	path = .config/zsh/plugins/zsh-vim-mode
+	url = git@github.com:softmoth/zsh-vim-mode.git
+[submodule ".config/grml-etc-core"]
+	path = .config/grml-etc-core
+	url = https://github.com/grml/grml-etc-core.git
+[submodule ".config/nord-dircolors"]
+	path = .config/nord-dircolors
+	url = git@github.com:arcticicestudio/nord-dircolors.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
