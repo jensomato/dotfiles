@@ -1,6 +1,10 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 export VIFM="$XDG_CONFIG_HOME/vifm"
+
+# vim config
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 
 # zsh config
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
@@ -36,7 +40,8 @@ export JAVA_HOME="/usr/lib/jvm/default-java"
 export MVN_HOME="/opt/maven"
 export MAVEN_HOME="/opt/maven"
 export ANDROID_HOME="/opt/Android/Sdk"
-export PATH="$HOME/bin:$MVN_HOME/bin:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$MVN_HOME/bin:$ANDROID_HOME/platform-tools:$PATH"
 export MC_PROFILE_ROOT="$HOME"
+export IDEA_JDK="$JAVA_HOME"
 # TERM variable for truecolor support in tmux - https://github.com/icymind/NeoSolarized
 export TERM="xterm-256color"

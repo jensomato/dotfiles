@@ -1,0 +1,140 @@
+set termguicolors
+set background=dark
+
+" --------- System Config -----------------------------------------------------
+set title " Allow VIM to retitle the terminal
+set history=100 " Allow a lot more history
+set nocompatible " Disable old-time Vim compat
+let mapleader = ","
+let g:mapleader = ","
+set t_ti= t_te= " prevent Vim from clearing screen when exiting
+
+" --------- Environment
+set directory=$XDG_CACHE_HOME/vim/swap//,~//,/tmp//
+set backupdir=$XDG_CACHE_HOME/vim/backup//,~//,/tmp//
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set undodir=$XDG_CACHE_HOME/vim/undo//,~//,/tmp//
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
+" --------- Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
+colorscheme base16-nord
+let base16colorspace=256  " Access colors present in 256 colorspace
+
+" --------- Searching
+set incsearch " Search as we type
+set hlsearch " highlight all matches
+set ignorecase
+set smartcase
+set magic " Regexp magic
+
+" --------- Errors
+set noerrorbells
+set visualbell t_vb=[?5h$<100/>[?5l
+
+" --------- Matching enclosures
+set showmatch " Highlight matching parens
+set mat=2 " Blink matching parents
+
+" --------- Line numbers
+set number " Show line numbers
+set relativenumber " Relative numbers for all but the current line
+set cursorline " Add an indicator for the current line
+set colorcolumn=90 " Guard at line 90, yellow light
+highlight ColorColumn ctermbg=3*
+
+" --------- Files
+" Read ffiles when changed from the outside
+set autoread
+" Fast saving and sudo saving
+nmap <leader>w :w!<cr>
+command W w !sudo tee % > /dev/null
+" Unix as standard
+set ffs=unix,dos,mac
+
+" Protect changes between writes. Default values of
+" updatecount (200 keystrokes) and updatetime
+" (4 seconds) are fine
+set swapfile
+" protect against crash-during-write
+set writebackup
+" but do not persist backup after successful write
+set nobackup
+" use rename-and-write-new method whenever safe
+set backupcopy=auto
+" persist the undo tree for each file
+set undofile
+
+" --------- Statusbar (using Lightline)
+set laststatus=2 " Allow a status bar
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+set noshowmode " Dont't show mode as we use lightline plugin
+
+" --------- EasyMotion bindings
+"let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+" Only use these keys for jump highlights as some of the default keys are
+" difficult to read or to reach
+let g:EasyMotion_keys='qwertzuiopasdlkjf'
+" s{char}{label} for basic jumping
+nmap s <Plug>(easymotion-overwin-f2)
+" Line movement
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader><down> <Plug>(easymotion-j)
+map <Leader><up> <Plug>(easymotion-k)
+
+" --------- GitGutter Plugin
+let g:gitgutter_override_sign_column_highlight = 0 " let NeoSolarized override colors
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = 'x'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = 'w'
+
+" --------- fzf Plugin
+source /usr/share/doc/fzf/examples/fzf.vim
+
+nnoremap <C-f> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
+
+" --------- Move Lines
+nnoremap <C-Down> :m .+1<CR>==
+nnoremap <C-Up> :m .-2<CR>==
+inoremap <C-Down> <Esc>:m .+1<CR>==gi
+inoremap <C-Up> <Esc>:m .-2<CR>==gi
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
+
+" run macro in register q by hitting <space> in normal mode
+nnoremap <Space> @q
+
+" disable search highlights until next search
+nnoremap <C-x> :nohlsearch<CR>
+
+" copy and paste from system clipboard
+:inoremap <C-v> <ESC>"+pa
+:vnoremap <C-c> "+y
+:vnoremap <C-d> "+d
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" netrw config
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+:nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+runtime ftplugin/man.vim
