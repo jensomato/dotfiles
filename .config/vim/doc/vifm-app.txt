@@ -1,0 +1,1 @@
+../bundle/vifm.vim/doc/app/vifm-app.txt
