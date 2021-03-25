@@ -1,0 +1,13 @@
+#!/bin/bash
+KENSINGTON="Kensington Expert Mouse"
+ELECOM="ELECOM TrackBall Mouse HUGE TrackBall"
+
+if xinput --list | grep -q "$KENSINGTON"; then
+   xinput --set-prop "$KENSINGTON" 'libinput Button Scrolling Button' '8'
+   xinput --set-prop "$KENSINGTON" 'libinput Scroll Method Enabled' '0' '0' '1'
+fi
+
+if xinput --list | grep -q "$ELECOM"; then
+   xinput --set-prop "pointer:$ELECOM" 'libinput Button Scrolling Button' '9'
+   xinput --set-prop "pointer:$ELECOM" 'libinput Scroll Method Enabled' '0' '0' '1'
+fi
