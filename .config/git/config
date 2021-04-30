@@ -1,0 +1,13 @@
+[include]
+	path = config.local
+[diff]
+        tool = vimdiff
+[pager]
+        diff = diff-so-fancy | less -n --tabs=1,5 -RFX
+        show = diff-so-fancy | less -n --tabs=1,5 -RFX
+[commit]
+        gpgsign = true
+[core]
+        autocrlf = input
+[worktree]
+        guessRemote = true
