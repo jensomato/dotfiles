@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -ueo pipefail
+
+PARAM=${1-"Frankfurt"}
+
+echo "PARAM=$PARAM"
+
+if [ "$PARAM" = "-h" ]; then
+	cat <<EOF>&2
+Usage: ${0##*/} [OPTIONS]
+
+Display weather forecast.
+
+Use '${0##*/} :help' to list all options.
+
+EOF
+	exit
+fi
+
+
+
+curl wttr.in/"$PARAM?lang=de&n"
+

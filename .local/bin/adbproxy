@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -ue -o pipefail
+
+DEVICE_PORT=${1:-8080}
+LOCAL_PORT=${2:-3128}
+
+adb shell settings put global http_proxy localhost:"$DEVICE_PORT"
+adb shell settings put global https_proxy localhost:"$DEVICE_PORT"
+adb reverse tcp:"$DEVICE_PORT" tcp:"$LOCAL_PORT"
+
