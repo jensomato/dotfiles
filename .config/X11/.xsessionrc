@@ -1,5 +1,5 @@
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -r "$HOME/.config/shell/profile" ] ; then
+    . "$HOME/.config/shell/profile"
 fi
 
 # set keyboard layout
