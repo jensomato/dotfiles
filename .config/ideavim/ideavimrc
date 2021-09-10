@@ -1,0 +1,55 @@
+let mapleader=" "
+set number
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard=unnamed
+set scrolloff=5
+set relativenumber
+set showmode
+set surround
+set easymotion
+set commentary
+set highlightedyank
+set exchange
+set ReplaceWithRegister
+let g:EasyMotion_do_mapping=0
+//nnoremap gcc :action CommentByLineComment<cr>
+//nnoremap <leader><leader> :action SearchEverywhere<cr>
+nnoremap <leader>ff :action FindInPath<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>su :action ShowUsages<cr>
+nnoremap <leader>cv :action ChangeView<cr>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<cr>
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>* :action HighlightUsagesInFile<cr>
+//nnoremap <leader>e :action Switcher<cr>
+nnoremap <leader>n :action GotoClass<cr>
+nnoremap <leader>N :action GotoFile<cr>
+nnoremap <leader>gs :action FileStructurePopup<cr>
+nnoremap <leader>d :action GotoDeclaration<cr>
+noremap ge :action ShowErrorDescription<cr>
+noremap gi :action ShowIntentionActions<cr>
+noremap gp :action ParameterInfo<cr>
+noremap ghh :action QuickJavaDoc<cr>
+noremap ght :action QuickTypeDefinition<cr>
+noremap gco :action OptimizeImports<cr>
+noremap gcr :action ReformatCode<cr>
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+map ghe :action ExpressionTypeInfo<cr>
+//nnoremap <leader>s :action FileStructurePopup<cr>
+//map <leader><leader> <c-s-6>
+map <leader><leader> :action Switcher<cr>
+map <leader>v :action Tool_External Tools_GVim<cr>
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+map <C-n> <Action>(GotoNextError)
+map <C-p> <Action>(GotoPreviousError)
+map s <Plug>(easymotion-sn)
+map f <Plug>(easymotion-sl)
+map <S-Down> <Plug>(easymotion-j)
+map <S-Up> <Plug>(easymotion-k)
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
