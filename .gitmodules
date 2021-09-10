@@ -61,3 +61,6 @@
 [submodule ".config/vim/bundle/vim-highlightedyank"]
 	path = .config/vim/bundle/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
+[submodule ".local/share/rofi-pass"]
+	path = .local/share/rofi-pass
+	url = https://github.com/carnager/rofi-pass.git
