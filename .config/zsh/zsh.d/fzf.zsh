@@ -1,6 +1,13 @@
 ## fzf config
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+if [ -r /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+	source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+if [ -r /usr/share/doc/fzf/examples/completion.zsh ]; then
+	source /usr/share/doc/fzf/examples/completion.zsh
+fi
+if [ -r /usr/share/zsh/vendor-completions/_fzf ]; then
+	source /usr/share/zsh/vendor-completions/_fzf
+fi
 
 # Base16 Nord
 # Author: arcticicestudio
