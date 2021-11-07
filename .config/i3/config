@@ -156,8 +156,9 @@ for_window [class="^terminal_scratchpad$"] border 1pixel, mark "terminal"
 for_window [window_role="pop-up"]	floating enable
 for_window [class="Wfica_Seamless"] floating enable
 for_window [class="^QOwnNotes$" window_type="normal"] mark "notes"
-for_window [con_mark="notes"] move scratchpad, resize set 2500 1200
-for_window [con_mark="terminal"] move scratchpad
+for_window [class="^Joplin$" window_type="normal"] mark "notes"
+for_window [con_mark="notes"] move scratchpad, resize set 80 ppt 80 ppt
+for_window [con_mark="terminal"] move scratchpad, resize set 80 ppt 80 ppt
 
 # Mark windows for named scratchpads
 for_window [class="keepassxc" title="^.*.kdbx - KeePassXC"] mark "keys"; move scratchpad
@@ -177,7 +178,7 @@ no_focus [window_role="pop-up"]
 
 # scratchpad
 bindsym $mod+m move scratchpad
-bindsym F12 [con_mark="terminal"] scratchpad show
+bindsym F12 [con_mark="terminal"] scratchpad show, move position center
 
 # rofi-pass
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/rofi-pass
