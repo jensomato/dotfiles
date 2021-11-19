@@ -317,7 +317,7 @@ set $base0F #B48EAD
 
 # Basic bar configuration using the Base16 variables.
 bar {
-    status_command i3blocks
+    status_command SCRIPT_DIR=$HOME/.local/share/i3blocks-contrib i3blocks
     position top
 
     colors {

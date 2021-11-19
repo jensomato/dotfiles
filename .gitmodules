@@ -67,3 +67,6 @@
 [submodule ".local/share/diff-so-fancy"]
 	path = .local/share/diff-so-fancy
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule ".local/share/i3blocks-contrib"]
+	path = .local/share/i3blocks-contrib
+	url = https://github.com/vivien/i3blocks-contrib.git

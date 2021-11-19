@@ -106,9 +106,8 @@ label=BAT
 #instance=1
 interval=30
 
-#if you prefer updating only when signaled
-[volume-pulseaudio]
-command=$HOME/.local/bin/statusbar/volume-pulseaudio -a
+[volume-pipewire]
+command=$SCRIPT_DIR/volume-pipewire/volume-pipewire
 interval=once
 signal=1
 
