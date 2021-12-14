@@ -70,3 +70,6 @@
 [submodule ".local/share/i3blocks-contrib"]
 	path = .local/share/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib.git
+[submodule ".config/vim/bundle/nord-vim"]
+	path = .config/vim/bundle/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim.git

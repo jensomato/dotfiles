@@ -24,7 +24,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme base16-nord
+colorscheme nord
 let base16colorspace=256  " Access colors present in 256 colorspace
 
 " --------- Searching
