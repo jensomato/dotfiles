@@ -112,7 +112,7 @@ interval=once
 signal=1
 
 [rofi-calendar]
-command=BAR_POSITION=top ROFI_CONFIG_FILE=~/.local/share/rofi/themes/nord.rasi LANG=de_DE.UTF-8 $SCRIPT_DIR/rofi-calendar/rofi-calendar
+command=BAR_POSITION=top ROFI_CONFIG_FILE=~/.config/rofi/themes/nord.rasi LANG=de_DE.UTF-8 $SCRIPT_DIR/rofi-calendar/rofi-calendar
 interval=3600
 
 # Date Time

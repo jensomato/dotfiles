@@ -1,0 +1,15 @@
+configuration {
+  modi: "window,run,ssh,drun";
+  font: "JetBrains Mono Regular 14";
+  drun-display-format: "{icon} {name}";
+  show-icons: true;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "nord"
