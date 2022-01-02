@@ -13,8 +13,8 @@ set highlightedyank
 set exchange
 set ReplaceWithRegister
 let g:EasyMotion_do_mapping=0
-//nnoremap gcc :action CommentByLineComment<cr>
-//nnoremap <leader><leader> :action SearchEverywhere<cr>
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
 nnoremap <leader>ff :action FindInPath<cr>
 nnoremap <leader>fu :action FindUsages<cr>
 nnoremap <leader>su :action ShowUsages<cr>
@@ -27,8 +27,14 @@ nnoremap <leader>n :action GotoClass<cr>
 nnoremap <leader>N :action GotoFile<cr>
 nnoremap <leader>gs :action FileStructurePopup<cr>
 nnoremap <leader>d :action GotoDeclaration<cr>
-noremap ge :action ShowErrorDescription<cr>
-noremap gi :action ShowIntentionActions<cr>
+nnoremap ge :action ShowErrorDescription<cr>
+nnoremap gd :action GotoDeclaration<cr>
+nnoremap gi :action GotoImplementation<cr>
+nnoremap gs :action GotoSuperMethod<cr>
+nnoremap gg :action FileStructurePopup<cr>
+nnoremap gtf :action GotoFile<cr>
+nnoremap gtc :action GotoClass<cr>
+//noremap gi :action ShowIntentionActions<cr>
 noremap gp :action ParameterInfo<cr>
 noremap ghh :action QuickJavaDoc<cr>
 noremap ght :action QuickTypeDefinition<cr>
@@ -38,14 +44,17 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 map ghe :action ExpressionTypeInfo<cr>
 //nnoremap <leader>s :action FileStructurePopup<cr>
 //map <leader><leader> <c-s-6>
-map <leader><leader> :action Switcher<cr>
+nmap <leader><leader> :action FileStructurePopup<CR>
+//map <leader><leader> :action Switcher<cr>
 map <leader>v :action Tool_External Tools_GVim<cr>
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
 map <C-n> <Action>(GotoNextError)
 map <C-p> <Action>(GotoPreviousError)
-map s <Plug>(easymotion-sn)
-map f <Plug>(easymotion-sl)
+map <C-s> <Action>(FileStructurePopup)
+nmap s <Plug>(easymotion-sn)
+nmap f <Plug>(easymotion-sl)
+nmap gtt <Plug>(acejump-linemarks)
 map <S-Down> <Plug>(easymotion-j)
 map <S-Up> <Plug>(easymotion-k)
 " Disable Arrow keys in Insert mode
