@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Thunderbird Select Handler
+Comment=Thunderbird integration with XDG
+Icon=thunderbird
+MimeType=x-scheme-handler/mail;
+Exec=thunderbird-select %u
+Terminal=true
+X-MultipleArgs=false
+Categories=Network;Email;News;GTK;
