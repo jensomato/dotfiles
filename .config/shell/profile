@@ -37,6 +37,9 @@ export LESS="-iRw"
 # man configuration
 export MANPAGER='/bin/sh -c "col -b | vim --noplugin -c '\''set ft=man ts=8 nomod nolist nonu noma'\'' -"'
 
+# pass configuration
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass-store"
+
 export JAVA_HOME="/usr/lib/jvm/default-java"
 export MVN_HOME="/opt/maven"
 export MAVEN_HOME="/opt/maven"
