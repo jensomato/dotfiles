@@ -291,7 +291,7 @@ filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
        \ {View contents}
        \ zip -sf %c | less,
        \ {Extract here}
-       \ tar -xf %c,
+       \ unzip %c,
 fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
 
 " ArchiveMount
