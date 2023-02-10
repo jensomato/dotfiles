@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Joplin
+Comment=Plain-text file markdown note taking with Nextcloud/ownCloud integration
+Exec=Joplin
+Keywords=markdown;owncloud;nextcloud;notes;
+Icon=Joplin
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Utility;TextEditor;
+StartupWMClass=Joplin
