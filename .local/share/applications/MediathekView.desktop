@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=MediathekView
+Comment=Plain-text file markdown note taking with Nextcloud/ownCloud integration
+Exec=MediathekView
+Keywords=mediathek;
+Icon=MediathekView
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Utility;
+StartupWMClass=MediathekView
