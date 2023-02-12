@@ -1,13 +1,39 @@
 [include]
 	path = config.local
 [diff]
-        tool = vimdiff
+        tool = vim
+	guitool = meld
+	submodule = log
+        algorithm = patience
+        indentHeuristic = true
+        colorMoved = default
+[difftool]
+	prompt = false
+[difftool "vim"]
+        # by default, Git runs vimdiff in read only mode. Make it run in read-write mode
+        cmd = "vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\""
+[difftool "meld"]
+        cmd = "meld \"$LOCAL\" \"$REMOTE\" --label \"DIFF (ORIGINAL MY)\""
+[merge]
+	# tool = vim_mergetool
+        tool = meld
+        guitool = meld
+
+        # Standard conflict markers include only ours and theirs side
+        # Use "diff3" to include base ancestor version as well
+        # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
+        conflictStyle = diff3
+[mergetool "meld"]
+        cmd = "meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\""
+	trustExitCode = false
 [pager]
-        diff = diff-so-fancy | less -n --tabs=1,5 -RFX
-        show = diff-so-fancy | less -n --tabs=1,5 -RFX
+        diff = diff-so-fancy | less -n --tabs=1,5 -RFX --pattern '^(Date|added|deleted|modified): '
+        show = diff-so-fancy | less -n --tabs=1,5 -RFX --pattern '^(Date|added|deleted|modified): '
 [commit]
         gpgsign = true
 [core]
         autocrlf = input
 [worktree]
         guessRemote = true
+[alias]
+	d = difftool

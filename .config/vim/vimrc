@@ -138,3 +138,11 @@ let g:netrw_liststyle = 3
 
 :nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 runtime ftplugin/man.vim
+
+" Open diffs in vertical splits
+" Use 'xdiff' library options: patience algorithm with indent-heuristics (same to Git options)
+" NOTE: vim uses the external diff utility which doesn't do word diffs nor can it find moved-and-modified lines.
+" NOTE: still this algorithm is worse than "delta" or "DiffMerge"
+" See: https://stackoverflow.com/questions/36519864/the-way-to-improve-vimdiff-similarity-searching-mechanism
+" See: https://vimways.org/2018/the-power-of-diff/
+set diffopt=internal,filler,vertical,context:5,foldcolumn:1,indent-heuristic,algorithm:patience
