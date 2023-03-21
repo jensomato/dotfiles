@@ -1,0 +1,6 @@
+[Added Associations]
+x-scheme-handler/mid=thunderbird.desktop;
+
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mid=thunderbird.desktop;
