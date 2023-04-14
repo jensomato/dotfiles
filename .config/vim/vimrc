@@ -5,8 +5,8 @@ set background=dark
 set title " Allow VIM to retitle the terminal
 set history=100 " Allow a lot more history
 set nocompatible " Disable old-time Vim compat
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 set t_ti= t_te= " prevent Vim from clearing screen when exiting
 
 " --------- Environment
