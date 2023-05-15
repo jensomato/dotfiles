@@ -73,3 +73,12 @@
 [submodule ".config/vim/bundle/nord-vim"]
 	path = .config/vim/bundle/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule ".local/share/snippy"]
+	path = .local/share/snippy
+	url = https://github.com/BarbUk/snippy.git
+[submodule ".config/vim/bundle/wiki.vim"]
+	path = .config/vim/bundle/wiki.vim
+	url = https://github.com/lervag/wiki.vim.git
+[submodule ".config/vim/bundle/VimCompletesMe.vim"]
+	path = .config/vim/bundle/VimCompletesMe.vim
+	url = https://git.sr.ht/~ackyshake/VimCompletesMe.vim

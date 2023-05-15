@@ -101,6 +101,25 @@ let g:gitgutter_sign_removed = 'x'
 let g:gitgutter_sign_removed_first_line = '^'
 let g:gitgutter_sign_modified_removed = 'w'
 
+" --------- vim wiki
+function TransformMdToWiki(url, text, link) abort dict
+      let l:url = substitute(a:url, '\.md$', '', '')
+      let l:url = "hallo"
+      return wiki#link#templates#wiki(l:url, a:text, a:link)
+    endfunction
+let g:wiki_root = '~/projects/notes'
+let g:wiki_link_transforms = {
+          \ 'md': 'TransformMdToWiki',
+          \}
+let g:wiki_link_creation = {
+              \ 'md': {
+              \   'link_type': 'wiki',
+              \   'url_extension': '',
+              \   'url_transform': { x ->
+              \     substitute(tolower(x), '\s\+', '-', 'g') },
+              \ },
+              \}
+
 " --------- fzf Plugin
 source /usr/share/doc/fzf/examples/fzf.vim
 
