@@ -79,6 +79,7 @@
 [submodule ".config/vim/bundle/wiki.vim"]
 	path = .config/vim/bundle/wiki.vim
 	url = https://github.com/lervag/wiki.vim.git
-[submodule ".config/vim/bundle/VimCompletesMe.vim"]
-	path = .config/vim/bundle/VimCompletesMe.vim
-	url = https://git.sr.ht/~ackyshake/VimCompletesMe.vim
+[submodule ".config/vim/bundle/vim-mucomplete"]
+	path = .config/vim/bundle/vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete.git
+	shallow = true
