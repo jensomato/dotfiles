@@ -335,8 +335,6 @@ alias -g G='|grep'
 
 ## END OF FILE #################################################################
 
-## source wrapper script to exit to the current directory from mc
-source /usr/lib/mc/mc.sh
 
 n()
 {
