@@ -114,6 +114,10 @@ endif
 
 set statusline="  %t %= %E | %A | %-16d  "
 
+" Set custome ruler format
+
+set rulerformat='%2l/%S%[ +%x%]'
+
 " ------------------------------------------------------------------------------
 
 " :mark mark /full/directory/path [filename]
