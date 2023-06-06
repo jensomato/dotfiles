@@ -212,6 +212,8 @@ fileviewer *.flac soxi
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
          \*.as[fx]
+        \ {View using smplayer}
+        \ smplayer %f &,
         \ {View using vlc}
         \ vlc --quiet --started-from-file %f &,
         \ {View using ffplay}
@@ -474,6 +476,8 @@ nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space> ""<left>
 nnoremap <f8> :delete<cr>
 
+" Display menu of programs set for the file type of the current file
+nnoremap <silent> o :file &<cr>
 " ------------------------------------------------------------------------------
 
 " Various customization examples
