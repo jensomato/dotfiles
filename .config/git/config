@@ -37,3 +37,7 @@
         guessRemote = true
 [alias]
 	d = difftool
+[pull]
+	ff = only
+[fetch]
+	prune = true
