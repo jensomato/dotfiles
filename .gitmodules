@@ -10,54 +10,12 @@
 [submodule ".config/tmux/plugins/tpm"]
 	path = .config/tmux/plugins/tpm
 	url = http://github.com/tmux-plugins/tpm.git
-[submodule ".config/vim/bundle/vim-peekaboo"]
-	path = .config/vim/bundle/vim-peekaboo
-	url = https://github.com/junegunn/vim-peekaboo.git
-[submodule ".config/vim/bundle/indentLine"]
-	path = .config/vim/bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
-[submodule ".config/vim/bundle/vifm.vim"]
-	path = .config/vim/bundle/vifm.vim
-	url = https://github.com/vifm/vifm.vim.git
 [submodule ".config/vim/bundle/base16-vim"]
 	path = .config/vim/bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule ".config/vim/bundle/fzf.vim"]
-	path = .config/vim/bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule ".config/vim/bundle/vim-surround"]
-	path = .config/vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".config/vim/bundle/editorconfig-vim"]
-	path = .config/vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule ".config/vim/bundle/vim-repeat"]
-	path = .config/vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
-[submodule ".config/vim/bundle/vim-sensible"]
-	path = .config/vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule ".config/vim/bundle/vim-numbertoggle"]
-	path = .config/vim/bundle/vim-numbertoggle
-	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
-[submodule ".config/vim/bundle/vim-gitgutter"]
-	path = .config/vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule ".config/vim/bundle/vim-easymotion"]
-	path = .config/vim/bundle/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion.git
-[submodule ".config/vim/bundle/lightline.vim"]
-	path = .config/vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
-[submodule ".config/vim/bundle/vim-pathogen"]
-	path = .config/vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
 [submodule ".local/share/xprop2i3"]
 	path = .local/share/xprop2i3
 	url = https://github.com/EvanCarroll/xprop2i3.git
-[submodule ".config/vim/bundle/vim-highlightedyank"]
-	path = .config/vim/bundle/vim-highlightedyank
-	url = https://github.com/machakann/vim-highlightedyank.git
 [submodule ".local/share/rofi-pass"]
 	path = .local/share/rofi-pass
 	url = https://github.com/carnager/rofi-pass.git
@@ -68,16 +26,6 @@
 [submodule ".local/share/i3blocks-contrib"]
 	path = .local/share/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib.git
-[submodule ".config/vim/bundle/nord-vim"]
-	path = .config/vim/bundle/nord-vim
-	url = https://github.com/arcticicestudio/nord-vim.git
 [submodule ".local/share/snippy"]
 	path = .local/share/snippy
 	url = https://github.com/BarbUk/snippy.git
-[submodule ".config/vim/bundle/wiki.vim"]
-	path = .config/vim/bundle/wiki.vim
-	url = https://github.com/lervag/wiki.vim.git
-[submodule ".config/vim/bundle/vim-mucomplete"]
-	path = .config/vim/bundle/vim-mucomplete
-	url = https://github.com/lifepillar/vim-mucomplete.git
-	shallow = true
