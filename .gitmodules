@@ -34,9 +34,6 @@
 [submodule ".config/vim/bundle/vim-repeat"]
 	path = .config/vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule ".config/vim/bundle/vim-tmux-navigator"]
-	path = .config/vim/bundle/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule ".config/vim/bundle/vim-sensible"]
 	path = .config/vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
