@@ -29,3 +29,71 @@
 [submodule ".local/share/snippy"]
 	path = .local/share/snippy
 	url = https://github.com/BarbUk/snippy.git
+[submodule ".config/vim/pack/plugins/start/nordtheme-vim"]
+	path = .config/vim/pack/plugins/start/nordtheme-vim
+	url = https://github.com/nordtheme/vim.git
+	branch = main
+[submodule ".config/vim/pack/plugins/start/vim-peekaboo"]
+	path = .config/vim/pack/plugins/start/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/indentLine"]
+	path = .config/vim/pack/plugins/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vifm.vim"]
+	path = .config/vim/pack/plugins/start/vifm.vim
+	url = https://github.com/vifm/vifm.vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/fzs.vim"]
+	path = .config/vim/pack/plugins/start/fzs.vim
+	url = https://github.com/junegunn/fzf.vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-surround"]
+	path = .config/vim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/fzf.vim"]
+	path = .config/vim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/editorconfig-vim"]
+	path = .config/vim/pack/plugins/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-repeat"]
+	path = .config/vim/pack/plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-sensible"]
+	path = .config/vim/pack/plugins/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-gitgutter"]
+	path = .config/vim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-easymotion"]
+	path = .config/vim/pack/plugins/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/lightline.vim"]
+	path = .config/vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-highlightedyank"]
+	path = .config/vim/pack/plugins/start/vim-highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/wiki.vim"]
+	path = .config/vim/pack/plugins/start/wiki.vim
+	url = https://github.com/lervag/wiki.vim.git
+	branch = master
+[submodule ".config/vim/pack/plugins/start/vim-numbertoggle"]
+	path = .config/vim/pack/plugins/start/vim-numbertoggle
+	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+	branch = main
+[submodule ".config/vim/pack/plugins/start/vim-gitgutter"]
+	path = .config/vim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+	branch = master
