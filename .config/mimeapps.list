@@ -1,6 +1,10 @@
 [Added Associations]
 x-scheme-handler/mid=thunderbird.desktop;
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
 
 [Default Applications]
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/mid=thunderbird.desktop;
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
