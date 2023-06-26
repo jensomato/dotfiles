@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Freetube
+Comment=An Open Source YouTube app for privacy
+Exec=freetube
+Keywords=video;youtube;
+Icon=freetube
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo;Player;
+StartupWMClass=Joplin
