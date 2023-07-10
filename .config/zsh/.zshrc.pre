@@ -2,3 +2,4 @@ export COMPDUMPFILE="$XDG_CACHE_HOME/zsh/.zcompdump"
 export HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
 export DIRSTACKFILE="$XDG_CACHE_HOME/zsh/.zdirs"
 export GRML_COMP_CACHE_DIR="$XDG_CACHE_HOME/zsh/.cache"
+fpath=($XDG_CONFIG_HOME/zsh/completions $fpath)
