@@ -35,7 +35,7 @@ export NNN_COPIER="$HOME/scripts/nnn-copier.sh"
 export LESS="-iRw"
 
 # man configuration
-export MANPAGER='/bin/sh -c "col -b | vim --noplugin -c '\''set ft=man ts=8 nomod nolist nonu noma'\'' -"'
+export MANPAGER="vim -M -i NONE +MANPAGER -"
 
 # pass configuration
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass-store"
