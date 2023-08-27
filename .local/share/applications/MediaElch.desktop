@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=MediaElch
+Comment=MediaElch is a MediaManager for Kodi.
+Exec=MediaElch
+Keywords=mediaelch;
+Icon=MediaElch
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Utility;
+StartupWMClass=MediaElch
