@@ -475,8 +475,8 @@ nnoremap ,w :set wrap!<cr>
 " Example of standard two-panel file managers mappings
 nnoremap <f3> :!less %f<cr>
 nnoremap <f4> :edit<cr>
-nnoremap <f5> :copy<cr>
-nnoremap <f6> :move<cr>
+nnoremap <f5> :cp<cr>
+nnoremap <f6> :mv<cr>
 nnoremap <f7> :mkdir<space> ""<left>
 nnoremap <f8> :delete<cr>
 
@@ -522,6 +522,9 @@ command! FZFbookmarks : set noquickview
 
 command! fzfcd :execute 'cd'
                         \ fnameescape(term('find -type d | fzf 2> /dev/tty'))
+
+command! cp :yank | winrun , put
+command! mv :yank | winrun , put!
 
 nnoremap <c-f> :FZFfind<cr>
 nnoremap <c-b> :FZFbookmarks<cr>
