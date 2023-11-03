@@ -97,3 +97,7 @@
 	path = .config/vim/pack/plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	branch = master
+[submodule ".local/src/todofi.sh"]
+	path = .local/src/todofi.sh
+	url = https://github.com/hugokernel/todofi.sh.git
+	branch = master

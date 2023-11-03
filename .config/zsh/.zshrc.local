@@ -359,3 +359,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # set cursor to end of line when searching history
 bindkey "$key[Up]" history-beginning-search-backward-end
 bindkey "$key[Down]" history-beginning-search-forward-end
+
+# set completion of todo-txt
+compdef todo-txt=todo.sh
