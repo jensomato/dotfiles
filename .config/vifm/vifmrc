@@ -526,5 +526,8 @@ command! fzfcd :execute 'cd'
 command! cp :yank | winrun , put
 command! mv :yank | winrun , put!
 
+" move file to new dir with same name as file without extension
+command! mdmv :mkdir "%D/%c:r" | :move "%D/%c:r"
+
 nnoremap <c-f> :FZFfind<cr>
 nnoremap <c-b> :FZFbookmarks<cr>
