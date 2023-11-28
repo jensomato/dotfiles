@@ -8,3 +8,6 @@ b() {
 trim() { awk '{$1=$1};1' }
 ltrim() { awk '{ sub(/^[ \t]+/, ""); print }' }
 rtrim() { awk '{ sub(/[ \t]+$/, ""); print }' }
+cdb() {
+	cd "$(fzf-bookmarks)"
+}

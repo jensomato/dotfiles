@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Check if the bookmarks folder exists
+if [ ! -d "$BOOKMARKS_DIR" ]; then
+    echo "Bookmarks folder does not exist."
+    exit 1
+fi
+ 
+# Change to bookmarks folder and use fzf to interactively select a softlink
+selected_entry=$(find "$BOOKMARKS_DIR/" -type l -printf "%P" -exec sh -c 'printf " -> %s\0" "$(readlink -f "$1")"' _ {} \; | fzf --prompt="Select bookmark: " --read0)
+ 
+# Check if a selection was made
+if [ -z "$selected_entry" ]; then
+    echo "No bookmark selected. Exiting."
+    exit 1
+fi
+ 
+# Extract softlink name and target path from the selection using null byte as delimiter
+selected_name=$(echo "$selected_entry" | awk -v RS='\0' -F ' -> ' '{print $1}')
+target_path=$(echo "$selected_entry" | awk -v RS='\0' -F ' -> ' '{print $2}')
+ 
+# Print the selected target path
+echo "$target_path"

@@ -515,9 +515,9 @@ command! FZFfind :set noquickview
                   \| endif
 
 command! FZFbookmarks : set noquickview
-                  \| let $FZF_PICK = term('jq ".bmarks" "$VIFM/vifminfo.json" | head -n -1| tail -n +2 | tr -d "\n" | sed "s/},/\n/g" | cut -d: -f1,3 | sed "s/: \"/ [/" | sed "s/\",/]/" | sed "s/ *\"ts\"//" | sed "s/^ *//" | tr --delete \" | fzf --preview "ls -lhA --group-directories-first --color=always {1}" 2>/dev/tty | cut -d" " -f1')
+                  \| let $FZF_PICK = term('fzf-bookmarks 2>/dev/tty')
                   \| if $FZF_PICK != ''
-                  \|     execute 'cd' fnameescape($FZF_PICK)
+                  \|     execute 'cd' fnameescape($FZF_PICK) | redraw
                   \| endif
 
 command! fzfcd :execute 'cd'
