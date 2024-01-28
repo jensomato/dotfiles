@@ -101,3 +101,7 @@
 	path = .local/src/todofi.sh
 	url = https://github.com/hugokernel/todofi.sh.git
 	branch = master
+[submodule ".local/src/thumbfast"]
+	path = .local/src/thumbfast
+	url = https://github.com/po5/thumbfast.git
+	branch = master
