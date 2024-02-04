@@ -72,7 +72,7 @@
 [submodule ".config/vim/pack/plugins/start/vim-gitgutter"]
 	path = .config/vim/pack/plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-	branch = master
+	branch = main
 [submodule ".config/vim/pack/plugins/start/vim-easymotion"]
 	path = .config/vim/pack/plugins/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
@@ -93,10 +93,6 @@
 	path = .config/vim/pack/plugins/start/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 	branch = main
-[submodule ".config/vim/pack/plugins/start/vim-gitgutter"]
-	path = .config/vim/pack/plugins/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-	branch = master
 [submodule ".local/src/todofi.sh"]
 	path = .local/src/todofi.sh
 	url = https://github.com/hugokernel/todofi.sh.git
