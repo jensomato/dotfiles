@@ -12,3 +12,4 @@ alias 9='cd +9'
 alias d='dirs -v | head -10 | tail -9'
 alias xev-keycode="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf '%-3s %s\n', $5, $8 }'"
 alias reload='exec -l zsh'
+alias t='todo-txt'
