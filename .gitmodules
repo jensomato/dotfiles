@@ -101,3 +101,10 @@
 	path = .local/src/todofi.sh
 	url = https://github.com/hugokernel/todofi.sh.git
 	branch = master
+[submodule ".local/src/rofi-scripts"]
+	path = .local/src/rofi-scripts
+	url = https://github.com/davatorium/rofi-scripts.git
+[submodule ".local/src/todotxt-more"]
+	path = .local/src/todotxt-more
+	url = https://git.sr.ht/~proycon/todotxt-more
+	branch = master
