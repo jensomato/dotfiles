@@ -30,3 +30,5 @@ alias lsbig="command ls -flh *(.OL[1,10])"
 alias lssmall="command ls -Srl *(.oL[1,10])"
 
 alias grep='grep --color=auto'
+
+alias lg='lazygit'
