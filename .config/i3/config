@@ -185,6 +185,8 @@ bindsym F12 [con_mark="terminal"] scratchpad show, move position center
 
 # rofi-pass
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/rofi-pass
+bindsym $mod+t exec --no-startup-id $HOME/.local/bin/todofi.sh
+
 
 # menu-calc
 bindsym $mod+c exec --no-startup-id "gnome-calculator"
