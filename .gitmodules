@@ -1,9 +1,6 @@
 [submodule ".config/zsh/plugins/zsh-vim-mode"]
 	path = .config/zsh/plugins/zsh-vim-mode
 	url = http://github.com/softmoth/zsh-vim-mode.git
-[submodule ".config/grml-etc-core"]
-	path = .config/grml-etc-core
-	url = https://github.com/grml/grml-etc-core.git
 [submodule ".config/nord-dircolors"]
 	path = .config/nord-dircolors
 	url = http://github.com/arcticicestudio/nord-dircolors.git
