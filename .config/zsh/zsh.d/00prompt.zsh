@@ -1,3 +1,5 @@
+autoload -Uz vcs_info
+precmd() { vcs_info }
 function vim_mode_prompt () {
         REPLY=${MODE_INDICATOR_PROMPT}
     }
@@ -28,5 +30,8 @@ function +vi-git-untracked() {
   fi
 }
 
-grml_theme_add_token vim -f vim_mode_prompt
-zstyle ':prompt:grml:left:setup' items rc change-root user at host path vcs vim
+#grml_theme_add_token vim -f vim_mode_prompt
+zstyle ':prompt:left:setup' items rc change-root user at host path vcs vim
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
