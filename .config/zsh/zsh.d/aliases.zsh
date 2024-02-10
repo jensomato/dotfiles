@@ -18,3 +18,4 @@ alias kl='k list'
 alias ki='k interactive'
 
 alias t='todo-txt'
+alias lg='lazygit'
