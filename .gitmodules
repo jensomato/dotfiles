@@ -108,3 +108,7 @@
 	path = .local/src/thumbfast
 	url = https://github.com/po5/thumbfast.git
 	branch = master
+[submodule ".local/src/powerlevel10k"]
+	path = .local/src/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+	branch = master
