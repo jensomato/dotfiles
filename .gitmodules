@@ -1,12 +1,6 @@
 [submodule ".config/zsh/plugins/zsh-vim-mode"]
 	path = .config/zsh/plugins/zsh-vim-mode
 	url = http://github.com/softmoth/zsh-vim-mode.git
-[submodule ".config/grml-etc-core"]
-	path = .config/grml-etc-core
-	url = https://github.com/grml/grml-etc-core.git
-[submodule ".config/nord-dircolors"]
-	path = .config/nord-dircolors
-	url = http://github.com/arcticicestudio/nord-dircolors.git
 [submodule ".config/tmux/plugins/tpm"]
 	path = .config/tmux/plugins/tpm
 	url = http://github.com/tmux-plugins/tpm.git
@@ -107,4 +101,8 @@
 [submodule ".local/src/thumbfast"]
 	path = .local/src/thumbfast
 	url = https://github.com/po5/thumbfast.git
+	branch = master
+[submodule ".local/src/powerlevel10k"]
+	path = .local/src/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
 	branch = master
