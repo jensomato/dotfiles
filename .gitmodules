@@ -106,3 +106,7 @@
 	path = .local/src/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 	branch = master
+[submodule ".local/src/nord-dircolors"]
+	path = .local/src/nord-dircolors
+	url = https://github.com/nordtheme/dircolors.git
+	branch = develop

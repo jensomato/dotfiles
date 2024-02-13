@@ -81,6 +81,9 @@ n()
     fi
 }
 
+## dircolors
+[[ ! -f ~/.local/src/nord-dircolors/src/dir_colors ]] || eval "$(dircolors ~/.local/src/nord-dircolors/src/dir_colors)"
+
 ## less configuration
 eval "$(lesspipe)"
 
