@@ -18,3 +18,15 @@ alias kl='k list'
 alias ki='k interactive'
 
 alias t='todo-txt'
+
+alias ls='ls -v --color=auto'
+alias la='ls -la'
+alias ll='ls -l'
+alias lh='ls -hAl'
+alias l='ls -l'
+alias lsnew="command ls -rtlh *(D.om[1,10])"
+alias lsold="command ls -rtlh *(D.Om[1,10])"
+alias lsbig="command ls -flh *(.OL[1,10])"
+alias lssmall="command ls -Srl *(.oL[1,10])"
+
+alias grep='grep --color=auto'
