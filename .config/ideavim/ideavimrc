@@ -12,53 +12,78 @@ set commentary
 set highlightedyank
 set exchange
 set ReplaceWithRegister
+set idearefactormode=keep
+set ideajoin
+set argtextobj
 let g:EasyMotion_do_mapping=0
-nnoremap [[ :action MethodUp<CR>
-nnoremap ]] :action MethodDown<CR>
-nnoremap <leader>ff :action FindInPath<cr>
-nnoremap <leader>fu :action FindUsages<cr>
-nnoremap <leader>su :action ShowUsages<cr>
-nnoremap <leader>cv :action ChangeView<cr>
-nnoremap <leader>rr :action Refactorings.QuickListPopupAction<cr>
-nnoremap <leader>re :action RenameElement<cr>
-nnoremap <leader>* :action HighlightUsagesInFile<cr>
-//nnoremap <leader>e :action Switcher<cr>
-nnoremap <leader>n :action GotoClass<cr>
-nnoremap <leader>N :action GotoFile<cr>
-nnoremap <leader>gs :action FileStructurePopup<cr>
-nnoremap <leader>d :action GotoDeclaration<cr>
-nnoremap ge :action ShowErrorDescription<cr>
-nnoremap gd :action GotoDeclaration<cr>
-nnoremap gi :action GotoImplementation<cr>
-nnoremap gs :action GotoSuperMethod<cr>
-nnoremap gg :action FileStructurePopup<cr>
-nnoremap gtf :action GotoFile<cr>
-nnoremap gtc :action GotoClass<cr>
-//noremap gi :action ShowIntentionActions<cr>
-noremap gp :action ParameterInfo<cr>
-noremap ghh :action QuickJavaDoc<cr>
-noremap ght :action QuickTypeDefinition<cr>
-noremap gco :action OptimizeImports<cr>
-noremap gcr :action ReformatCode<cr>
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+nmap <leader>ff <Action>(FindInPath)
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>su <Action>(ShowUsages)
+nmap <leader>cv <Action>(ChangeView)
+nmap <leader>rr <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>re <Action>(RenameElement)
+nmap <leader>* <Action>(HighlightUsagesInFile)
+nmap <leader>e <Action>(Switcher)
+nmap <leader>n <Action>(GotoClass)
+nmap <leader>N <Action>(GotoFile)
+nmap <leader>gg <Action>(FileStructurePopup)
+nmap <leader>d <Action>(GotoDeclaration)
+nmap ge <Action>(ShowErrorDescription)
+nmap gi <Action>(GotoImplementation)
+nmap gs <Action>(GotoSuperMethod)
+nmap gt <Action>(GotoTypeDeclaration)
+nmap gl <Action>(AceLineIndentsAction)
+vmap gl <Plug>(easymotion-bd-jk)
+nmap gm <Action>(ShowBookmarks)
+nmap <leader>gi <Action>(ShowIntentionActions)
+nmap gp <Action>(ParameterInfo)
+nmap ghh <Action>(QuickJavaDoc)
+nmap ght <Action>(QuickTypeDefinition)
+nmap gco <Action>(OptimizeImports)
+nmap gcr <Action>(ReformatCode)
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-map ghe :action ExpressionTypeInfo<cr>
-//nnoremap <leader>s :action FileStructurePopup<cr>
-//map <leader><leader> <c-s-6>
-nmap <leader><leader> :action FileStructurePopup<CR>
-//map <leader><leader> :action Switcher<cr>
+map n nzz
+map N Nzz
+map ghe <Action>(ExpressionTypeInfo)
+nmap <leader><leader> <Action>(FileStructurePopup)
 map <leader>v :action Tool_External Tools_GVim<cr>
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
 map <C-n> <Action>(GotoNextError)
 map <C-p> <Action>(GotoPreviousError)
+map <C-S-n> <Action>(VcsShowNextChangeMarker)
+map <C-S-p> <Action>(VcsShowPrevChangeMarker)
 map <C-s> <Action>(FileStructurePopup)
-nmap s <Plug>(easymotion-sn)
-nmap f <Plug>(easymotion-sl)
-nmap gtt <Plug>(acejump-linemarks)
+map <C-f> <Action>(GotoFile)
+map <C-b> <Action>(Switcher)
+map <C-w> <Action>(CloseEditor)
+//map tt <Plug>(easymotion-jumptoanywhere)
+map tt <Plug>(easymotion-lineanywhere)
+map s <Plug>(easymotion-sn)
+map f <Plug>(easymotion-sl)
+nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
 map <S-Down> <Plug>(easymotion-j)
+map <C-Down> <Plug>(easymotion-j)
 map <S-Up> <Plug>(easymotion-k)
+map <C-Up> <Plug>(easymotion-k)
 " Disable Arrow keys in Insert mode
 imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+imap <C-n> <Action>(HippieCompletion)
+imap <C-p> <Action>(HippieBackwardCompletion)
+imap <C-t> <Action>(ParameterInfo)
+nmap <leader>i <Action>(Tool_External Tools_gvim)
+nmap <leader><leader>i <Action>(Tool_External Tools_gvim-start)
+nmap <leader>ts mm`m:action GotoSymbol<CR>
+vmap <leader>s <Action>(SurroundWith)
+
+" don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+" highlight current word
+nmap h mZ*`Z

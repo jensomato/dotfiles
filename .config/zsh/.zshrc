@@ -28,6 +28,11 @@ setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
 
+autoload -Uz colors && colors
+
+## dircolors
+[[ ! -f ~/.local/src/nord-dircolors/src/dir_colors ]] || eval "$(dircolors -b ~/.local/src/nord-dircolors/src/dir_colors)"
+
 # completion
 zmodload zsh/complist
 # Tab Selection Menu with Colors
@@ -42,9 +47,8 @@ zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!
 zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*' file-list all
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
@@ -81,8 +85,6 @@ n()
     fi
 }
 
-## dircolors
-[[ ! -f ~/.local/src/nord-dircolors/src/dir_colors ]] || eval "$(dircolors ~/.local/src/nord-dircolors/src/dir_colors)"
 
 ## less configuration
 eval "$(lesspipe)"
