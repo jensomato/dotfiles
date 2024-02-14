@@ -39,6 +39,7 @@
 	path = .config/vim/pack/plugins/start/vifm.vim
 	url = https://github.com/vifm/vifm.vim.git
 	branch = master
+	ignore = dirty
 [submodule ".config/vim/pack/plugins/start/vim-surround"]
 	path = .config/vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -83,6 +84,7 @@
 	path = .config/vim/pack/plugins/start/vim-numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle.git
 	branch = main
+	ignore = dirty
 [submodule ".local/src/todofi.sh"]
 	path = .local/src/todofi.sh
 	url = https://github.com/hugokernel/todofi.sh.git
