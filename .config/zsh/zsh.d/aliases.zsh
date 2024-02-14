@@ -9,6 +9,9 @@ alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+
 alias d='dirs -v | head -10 | tail -9'
 alias xev-keycode="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf '%-3s %s\n', $5, $8 }'"
 alias reload='exec -l zsh'
