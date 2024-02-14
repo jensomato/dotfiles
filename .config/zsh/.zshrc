@@ -34,13 +34,15 @@ autoload -Uz colors && colors
 [[ ! -f ~/.local/src/nord-dircolors/src/dir_colors ]] || eval "$(dircolors -b ~/.local/src/nord-dircolors/src/dir_colors)"
 
 # completion
+COMPDUMPFILE="$XDG_CACHE_HOME/zsh/.zcompdump"
+COMPCACHEDIR="$XDG_CACHE_HOME/zsh/.cache"
 zmodload zsh/complist
 # Tab Selection Menu with Colors
 autoload -Uz compinit
-compinit
+compinit -d "$COMPDUMPFILE"
 zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' cache-path "$COMPCACHEDIR"
 zstyle ':completion:*' menu select
 zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
