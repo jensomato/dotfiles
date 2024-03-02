@@ -189,7 +189,7 @@ bindsym $mod+t exec --no-startup-id $HOME/.local/bin/todofi.sh
 
 
 # menu-calc
-bindsym $mod+c exec --no-startup-id "gnome-calculator"
+bindsym $mod+c exec --no-startup-id LC_NUMERIC=de_DE.UTF-8 rofi -plugin-path $XDG_CONFIG_HOME/rofi/plugins -show calc -modes calc -no-sort -no-show-match -theme calc.rasi -calc-command "echo -n '{result}' | xclip -i -selection clipboard"
 
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +2% #increase sound volume
