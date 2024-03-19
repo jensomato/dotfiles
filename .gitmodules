@@ -108,3 +108,6 @@
 	path = .local/src/nord-dircolors
 	url = https://github.com/nordtheme/dircolors.git
 	branch = develop
+[submodule ".local/src/vifm_devicons"]
+	path = .local/src/vifm_devicons
+	url = https://github.com/thimc/vifm_devicons.git

@@ -531,3 +531,5 @@ command! mdmv :mkdir "%D/%c:r" | :move "%D/%c:r"
 
 nnoremap <c-f> :FZFfind<cr>
 nnoremap <c-b> :FZFbookmarks<cr>
+
+source "~/.local/src/vifm_devicons/favicons.vifm" 
