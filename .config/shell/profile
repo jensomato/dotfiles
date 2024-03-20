@@ -55,4 +55,3 @@ export TODOTXT_CFG_FILE="$XDG_CONFIG_HOME/todo/config"
 
 export HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
 export DIRSTACKFILE="$XDG_CACHE_HOME/zsh/.zdirs"
-fpath=($XDG_CONFIG_HOME/zsh/completions $fpath)

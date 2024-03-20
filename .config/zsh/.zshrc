@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+if [[ -d "$XDG_CONFIG_HOME/zsh/completions" ]]; then
+  fpath=($XDG_CONFIG_HOME/zsh/completions $fpath)
+fi
+
 HISTSIZE=100000                  # The maximum number of events to save in the internal history.
 SAVEHIST=100000                  # The maximum number of events to save in the history file.
 
