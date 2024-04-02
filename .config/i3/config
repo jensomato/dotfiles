@@ -186,6 +186,7 @@ bindsym F12 [con_mark="terminal"] scratchpad show, move position center
 # rofi-pass
 bindsym $mod+p exec --no-startup-id $HOME/.local/bin/rofi-pass
 bindsym $mod+t exec --no-startup-id $HOME/.local/bin/todofi.sh
+bindsym $mod+g exec --no-startup-id $HOME/.config/kitty/scripts/open-kitty-tab.sh
 
 
 # menu-calc
@@ -291,7 +292,7 @@ exec --no-startup-id nextcloud &
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id numlockx on
-exec --no-startup-id kitty --class terminal_scratchpad
+exec --no-startup-id kitty --class terminal_scratchpad --single-instance --session scratchpad-session.conf -o listen_on=unix:@kitty-terminal-scratchpad -o allow_remote_control=socket
 # Starting xss-lock for handling suspend on lid close by systemd and locking the screen
 # see https://wiki.debian.org/SystemdSuspendSedation
 exec --no-startup-id xss-lock -- $Locker &

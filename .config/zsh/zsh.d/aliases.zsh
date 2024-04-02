@@ -35,3 +35,5 @@ alias lssmall="command ls -Srl *(.oL[1,10])"
 alias grep='grep --color=auto'
 
 alias lg='lazygit'
+
+alias getkittysocket="netstat -lxp 2>/dev/null | grep -Po '@kitty-terminal-scratchpad-[0-9]+'"
