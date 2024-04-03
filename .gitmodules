@@ -92,10 +92,6 @@
 [submodule ".local/src/rofi-scripts"]
 	path = .local/src/rofi-scripts
 	url = https://github.com/davatorium/rofi-scripts.git
-[submodule ".local/src/todotxt-more"]
-	path = .local/src/todotxt-more
-	url = https://git.sr.ht/~proycon/todotxt-more
-	branch = master
 [submodule ".local/src/thumbfast"]
 	path = .local/src/thumbfast
 	url = https://github.com/po5/thumbfast.git
@@ -114,3 +110,6 @@
 [submodule ".local/src/todo.txt-cli"]
 	path = .local/src/todo.txt-cli
 	url = https://github.com/todotxt/todo.txt-cli.git
+[submodule ".local/src/todotxt-more"]
+	path = .local/src/todotxt-more
+	url = https://git.sr.ht/~proycon/todotxt-more
