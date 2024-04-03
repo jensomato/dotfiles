@@ -20,7 +20,7 @@ alias kc='k calendar'
 alias kl='k list'
 alias ki='k interactive'
 
-alias t='todo-txt'
+alias t='todo.sh'
 
 alias ls='ls -v --color=auto'
 alias la='ls -la'

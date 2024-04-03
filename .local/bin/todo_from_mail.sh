@@ -27,5 +27,5 @@ fi
 
 todo=$(rofi -dmenu -p "Add Todo: " -filter "$subject")
 if [[ $todo != "" ]]; then
-	todo-txt add "$todo @mail url:$message_id"
+	todo.sh add "$todo @mail url:$message_id"
 fi

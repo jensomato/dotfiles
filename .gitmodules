@@ -111,3 +111,6 @@
 [submodule ".local/src/vifm_devicons"]
 	path = .local/src/vifm_devicons
 	url = https://github.com/thimc/vifm_devicons.git
+[submodule ".local/src/todo.txt-cli"]
+	path = .local/src/todo.txt-cli
+	url = https://github.com/todotxt/todo.txt-cli.git
