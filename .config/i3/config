@@ -161,6 +161,7 @@ for_window [class="^Zim$" window_type="normal"] mark "zim"
 for_window [con_mark="notes"] move scratchpad, resize set 80 ppt 80 ppt
 for_window [con_mark="zim"] move scratchpad, resize set 80 ppt 80 ppt
 for_window [con_mark="terminal"] move scratchpad, resize set 80 ppt 80 ppt
+for_window [window_role="GtkFileChooserDialog"] floating enable, resize set 60 ppt 60 ppt, move position center
 
 # Mark windows for named scratchpads
 for_window [class="keepassxc" title="^.*.kdbx - KeePassXC"] mark "keys"; move scratchpad
