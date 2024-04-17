@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+search_term="$1"
+khard email -p --remove-first-line "$search_term" | sed -r -e "s/(.*)\t(.*)\t(.*)/\"\2\" <\1>/g" | sed -z "s/\n/, /g" | head -c-2
