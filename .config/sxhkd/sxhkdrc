@@ -1,0 +1,78 @@
+super + d
+	rofi -columns 2 -show-icons true -show drun -display-drun "Application 🖥️ "
+
+button10
+	WORD="$(xsel -o -p)"; goldendict -s "$WORD"
+
+super + shift + d
+	WORD="$(xsel -o -p)"; goldendict -s "$WORD"
+
+super + p
+	$HOME/.local/bin/rofi-pass
+
+super + t
+	$HOME/.local/bin/todofi.sh
+
+super + shift t
+	$HOME/.local/bin/todofi.sh -a
+
+super + b
+	rofi -modi "conf":"$HOME/.local/src/rofi-json/rofi-json.sh $XDG_CONFIG_HOME/rofi/tui-config.json" -matching fuzzy -show "conf"
+
+super + g
+	$HOME/.config/kitty/scripts/open-kitty-tab.sh
+
+super + c
+	LC_NUMERIC=de_DE.UTF-8 rofi -plugin-path $XDG_CONFIG_HOME/rofi/plugins -show calc -modes calc -no-sort -no-show-match -theme calc.rasi -calc-command "echo -n '{result}' | xclip -i -selection clipboard"
+
+super + i
+	$HOME/.local/scripts/i3/i3menu.sh
+
+# enter fullscreen mode for the focused container
+super + f
+	i3-msg fullscreen toggle
+
+# toggle tiling / floating
+super + shift + space
+	i3-msg floating toggle
+
+# change focus between tiling / floating windows
+super + space
+	i3-msg focus mode_toggle
+
+# focus the parent container
+super + a
+	i3-msg focus parent
+
+# focus the child container
+super + shift + a
+	i3-msg focus child
+
+# scratchpad
+super + m
+	i3-msg move scratchpad
+
+# show scratchpad terminal
+F12 
+	i3-msg '[con_mark="terminal"] scratchpad show, move position center'
+
+# show windows selector
+alt + Tab
+	rofi -show window
+
+# kill focused window
+super + shift + q
+	i3-msg kill
+
+# Scratchpadded Apps
+super + n
+	i3-msg '[con_mark="notes"] scratchpad show, move position center'
+
+super + z
+	i3-msg '[con_mark="zim"] scratchpad show, move position center'
+
+super + u
+	i3-msg 'move scratchpad, scratchpad show'
+
+super + l
+	$HOME/.local/scripts/i3/i3system.sh	

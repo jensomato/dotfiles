@@ -1,0 +1,21 @@
+# change focus
+super + {Left,Down,Up,Right}
+	i3-msg focus {left,down,up,right}
+
+# move focused window
+super + shift + {Left,Down,Up,Right}
+	i3-msg move {left,down,up,right}
+
+# switch to workspace
+super + {1-9,0}
+	i3-msg workspace $I3_WS{1-9,10}
+
+super + Tab
+	i3-msg workspace back_and_forth
+
+# move focused container to workspace
+super + shift + {1-9,0}
+	i3-msg move container to workspace $I3_WS{1-9,10}
+
+super + i
+	$HOME/.local/scripts/i3/i3menu.sh
