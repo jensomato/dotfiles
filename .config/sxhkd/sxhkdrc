@@ -53,8 +53,11 @@ super + m
 	i3-msg move scratchpad
 
 # show scratchpad terminal
-F12 
-	i3-msg '[con_mark="terminal"] scratchpad show, move position center'
+F12
+  ~/.local/scripts/i3/scratchpads.sh "terminal"
+
+super + s
+  ~/.local/scripts/i3/scratchpads.sh
 
 # show windows selector
 alt + Tab
@@ -75,4 +78,4 @@ super + u
 	i3-msg 'move scratchpad, scratchpad show'
 
 super + l
-	$HOME/.local/scripts/i3/i3system.sh	
+	$HOME/.local/scripts/i3/i3system.sh
