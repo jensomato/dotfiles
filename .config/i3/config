@@ -68,6 +68,12 @@ for_window [con_mark="zim"] move scratchpad, resize set 80 ppt 80 ppt
 for_window [con_mark="terminal"] move scratchpad, resize set 80 ppt 80 ppt
 for_window [window_role="GtkFileChooserDialog"] floating enable, resize set 60 ppt 60 ppt, move position center
 for_window [class="feh-floating"] floating enable, move position center
+for_window [class="^sp_mail$"] mark "sp_mail"
+for_window [con_mark="sp_mail"] move scratchpad, resize set 80 ppt 80 ppt
+for_window [class="sp_news"] mark "sp_news"
+for_window [con_mark="sp_news"] move scratchpad, resize set 80 ppt 80 ppt
+for_window [class="sp_fm"] mark "sp_fm"
+for_window [con_mark="sp_fm"] move scratchpad, resize set 80 ppt 80 ppt
 
 # Mark windows for named scratchpads
 for_window [class="keepassxc" title="^.*.kdbx - KeePassXC"] mark "keys"; move scratchpad
