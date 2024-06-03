@@ -13,12 +13,11 @@ show_scratchpad() {
 main() {
 	local mark="$1"
 	local program="$2"
-	#local exists=$(i3-msg -t get_marks | jq "[.[] | test(\"${mark}\")] | any")
 	hide_scratchpads "$mark"
-	#if [[ $exists == "false" ]]; then
 	if [[ $(i3-msg -t get_marks | jq "[.[] | test(\"${mark}\")] | any") == "false" ]]; then
 	  $program
-	  sleep 0.5
+	  # wait for window
+	  i3-msg -t subscribe '[ "window" ]'
 	fi
 	show_scratchpad "$mark"
 }

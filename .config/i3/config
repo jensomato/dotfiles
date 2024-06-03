@@ -78,6 +78,8 @@ for_window [class="^sp_terminal$"] mark --add "sp_terminal"
 for_window [con_mark="sp_terminal"] move scratchpad, resize set 80 ppt 80 ppt
 for_window [class="^sp_calendar$"] mark --add "sp_calendar"
 for_window [con_mark="sp_calendar"] move scratchpad, resize set 80 ppt 80 ppt
+for_window [class="^sp_todo$"] mark --add "sp_todo"
+for_window [con_mark="sp_todo"] move scratchpad, resize set 80 ppt 80 ppt
 
 # Mark windows for named scratchpads
 for_window [class="keepassxc" title="^.*.kdbx - KeePassXC"] mark "keys"; move scratchpad
