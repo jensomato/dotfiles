@@ -20,7 +20,7 @@ super + b
 	rofi -modi "conf":"$HOME/.local/src/rofi-json/rofi-json.sh $XDG_CONFIG_HOME/rofi/tui-config.json" -matching fuzzy -show "conf"
 
 super + g
-	$HOME/.config/kitty/scripts/open-kitty-tab.sh
+	~/.local/bin/goto
 
 super + c
 	LC_NUMERIC=de_DE.UTF-8 rofi -plugin-path $XDG_CONFIG_HOME/rofi/plugins -show calc -modes calc -no-sort -no-show-match -theme calc.rasi -calc-command "echo -n '{result}' | xclip -i -selection clipboard"
@@ -54,7 +54,7 @@ super + m
 
 # show scratchpad terminal
 F12
-  ~/.local/scripts/i3/scratchpads.sh "terminal"
+  ~/.local/scripts/i3/scratchpad_terminal.sh
 
 super + s
   ~/.local/scripts/i3/scratchpads.sh

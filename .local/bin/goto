@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+search=$(rofi -dmenu -p "goto: " -theme nord2.rasi -kb-accept-custom "" -kb-custom-1 "Control+Return" -theme-str "listview { enabled: false; } message { enabled: false; }")
+result="$?"
+
+case $result in
+	0)
+		firefox "$(sr -p go "$search")" &
+		i3-msg -t subscribe '[ "window" ]' &> /dev/null && i3-msg '[urgent="last"] focus' &> /dev/null
+		;;
+	10)
+		browser "$(sr -p go "$search")" &
+		i3-msg -t subscribe '[ "window" ]' &> /dev/null && i3-msg '[urgent="last"] focus' &> /dev/null
+		;;
+	*)
+		;;
+esac
