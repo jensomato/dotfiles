@@ -113,3 +113,6 @@
 [submodule ".local/src/todotxt-more"]
 	path = .local/src/todotxt-more
 	url = https://git.sr.ht/~proycon/todotxt-more
+[submodule ".local/src/zsh-vi-mode"]
+	path = .local/src/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git
