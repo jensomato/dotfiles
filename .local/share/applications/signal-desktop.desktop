@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Signal
+Exec=env LANG=de_DE.UTF-8 LANGUAGE=de_DE /opt/Signal/signal-desktop --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=signal-desktop
+StartupWMClass=Signal
+Comment=Private messaging from your desktop
+MimeType=x-scheme-handler/sgnl;x-scheme-handler/signalcaptcha;
+Categories=Network;InstantMessaging;Chat;
