@@ -20,9 +20,6 @@
 [submodule ".local/share/i3blocks-contrib"]
 	path = .local/share/i3blocks-contrib
 	url = https://github.com/vivien/i3blocks-contrib.git
-[submodule ".local/share/snippy"]
-	path = .local/share/snippy
-	url = https://github.com/BarbUk/snippy.git
 [submodule ".config/vim/pack/plugins/start/nordtheme-vim"]
 	path = .config/vim/pack/plugins/start/nordtheme-vim
 	url = https://github.com/nordtheme/vim.git
@@ -116,3 +113,6 @@
 [submodule ".local/src/zsh-vi-mode"]
 	path = .local/src/zsh-vi-mode
 	url = https://github.com/jeffreytse/zsh-vi-mode.git
+[submodule ".local/src/snippy"]
+	path = .local/src/snippy
+	url = https://github.com/BarbUk/snippy.git
