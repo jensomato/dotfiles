@@ -150,6 +150,7 @@ exec --no-startup-id nextcloud &
 exec --no-startup-id nm-applet &
 exec --no-startup-id dunst &
 exec --no-startup-id numlockx on
+exec --no-startup-id mousesetup &
 # Starting xss-lock for handling suspend on lid close by systemd and locking the screen
 # see https://wiki.debian.org/SystemdSuspendSedation
 exec --no-startup-id xss-lock -- $Locker &
