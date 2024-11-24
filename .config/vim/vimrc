@@ -153,3 +153,15 @@ set diffopt=internal,filler,vertical,context:5,foldcolumn:1,indent-heuristic,alg
 
 command! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 command! FormatJSON :%!python3 -m json.tool
+
+function! FzfSpellSink(word)
+  exe 'normal! "_ciw'.a:word
+endfunction
+
+function! FzfSpell()
+  let suggestions = spellsuggest(expand("<cword>"))
+  return fzf#run({'source': suggestions, 'sink': function("FzfSpellSink"), 'down': 10 })
+endfunction
+
+nnoremap z= :call FzfSpell()<CR>
+inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
