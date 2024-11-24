@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=MediathekView
-Comment=Plain-text file markdown note taking with Nextcloud/ownCloud integration
-Exec=MediathekView
+Comment=MediathekView ist ein Programm, das die Online-Mediatheken verschiedener öffentlich-rechtlicher TV-Sender durchsuchen und die vorhandenen Sendungen auflisten kann
+Exec=env GDK_SCALE=2 MediathekView
 Keywords=mediathek;
 Icon=MediathekView
 Type=Application
