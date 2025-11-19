@@ -1,0 +1,4 @@
+ROFI_BIN="$(command -v rofi) -theme script_menu_1.rasi"
+MARKUP_PROJECT='<span fgcolor="skyblue"><b>\1<\/b><\/span>'
+MARKUP_TAG='<span fgcolor="lightskyblue"><b>\1<\/b><\/span>'
+MARKUP_CONTEXT='<span fgcolor="deepskyblue"><b>\1<\/b><\/span>'

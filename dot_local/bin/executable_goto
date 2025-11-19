@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+hide_scratchpads() {
+	for m in $(i3-msg -t get_marks | jq ".[] | select(startswith(\"sp_\") and . != \"${1}\")")
+	do
+		i3-msg "[con_mark=${m}] move scratchpad"
+	done
+}
+
+bookmarks() {
+       	rofi -show bookmark -modes "bookmark:$HOME/.local/scripts/rofi/rofibookmarks.sh $(ls -t $BOOKMARKS_DIR/bookmarks/*.html | head -1)" -theme nord2 -kb-custom-1 "Ctrl+Return" -kb-accept-custom ""
+	hide_scratchpads
+}
+
+surfraw() {
+	ft_pattern="^ft (.*)"
+	search=$(rofi -dmenu -p "goto: " -theme nord2.rasi -kb-move-char-back "" -kb-accept-custom "" -kb-custom-1 "Control+Return" -kb-custom-2 "Control+b" -theme-str "listview { enabled: false; } message { enabled: false; }")
+	result="$?"
+	
+	case $result in
+		0)
+	
+			if [[ $search =~ $ft_pattern ]]
+			then
+				ft_search="${BASH_REMATCH[1]}"
+				$HOME/.local/scripts/i3/search-in-freetube "$ft_search"
+			else
+				firefox "$(sr -p go "$search")" &
+				i3-msg -t subscribe '[ "window" ]' &> /dev/null && i3-msg '[urgent="last"] focus' &> /dev/null
+				hide_scratchpads
+			fi
+			;;
+		10)
+			browser "$(sr -p go "$search")" &
+			i3-msg -t subscribe '[ "window" ]' &> /dev/null && i3-msg '[urgent="last"] focus' &> /dev/null
+			;;
+		11)
+			bookmarks
+			;;
+		*)
+			;;
+	esac
+}
+
+main() {
+	case "$1" in
+		bookmarks)
+			bookmarks
+			;;
+		*)
+			surfraw
+			;;
+	esac
+}
+
+main "$@"

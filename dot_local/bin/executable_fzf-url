@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -eo pipefail
+declare_vars() {
+  socket=$(netstat -lxp 2>/dev/null | grep -Po '@kitty-terminal-scratchpad-[0-9]+')
+  pattern='((http|https|ftp|gopher|gemini|mailto):(\/\/)?[^ <>"\t]*|(www|ftp)[0-9]?\.[-a-z0-9.]+)[^ .,;\t\n\r<">\):]?[^, <>"\t]*[^ .,;\t\n\r<">\):]'
+}
+
+main() {
+  declare_vars
+  notify-send "$1"
+  if [[ -f "$1" ]]; then
+    notify-send "file exists"
+    #grep -Po "$pattern" "$1"
+    #urls=$(grep -Po "$pattern" "$1")
+    urls=$(urlscan -d --headers -n "$1")
+  else  
+    notify-send "file not exists"
+    #urls=$(grep -Po "$pattern" -)
+    urls=$(urlscan -d --headers -n)
+  fi
+
+  #notify-send "$urls"
+  #kitty @ --to "unix:$socket" launch --type window --location hsplit focus-tab --match id:"$id"
+  url=$(echo -e "$urls" | fzf)
+  if [[ "$url" != "" ]]; then
+    notify-send "das ist es: $url"
+    setsid "$HOME/.local/bin/linkhandler" "$url"
+  fi
+}
+
+main "$@"

@@ -1,0 +1,8 @@
+% media, video
+
+# add audio track to video
+ffmpeg -i <deutsch> -i <english> -c copy -map 1:v -map 0:a -map 1:a final.mp4
+
+$ deutsch: find . -print0 -type f -name "*.mp4" -o -name "*.avi" -o -name "*.mkv" -o -name "*.mov" -o -name "*.wmv" | xargs -0 printf '%q\n'
+$ english: find . -print0 -type f -name "*.mp4" -o -name "*.avi" -o -name "*.mkv" -o -name "*.mov" -o -name "*.wmv" | xargs -0 printf '%q\n'
+

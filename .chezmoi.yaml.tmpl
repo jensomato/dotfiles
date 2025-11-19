@@ -1,0 +1,16 @@
+{{ $name := promptString "name" -}}
+{{ $email := promptString "email" -}}
+{{ $gpgKeyId := promptString "gpgKeyId" -}}
+{{ $intranet := promptString "intranet" -}}
+{{ $aichatApiKey := promptString "aichatApiKey" -}}
+
+encryption: gpg
+gpg:
+  recipient: {{ $gpgKeyId | quote }}
+
+data:
+  email: {{ $email | quote }}
+  gpgKeyId: {{ $gpgKeyId | quote }}
+  name: {{ $name | quote }}
+  intranet: {{ $intranet | quote }}
+  aichatApiKey: {{ $aichatApiKey | quote }}

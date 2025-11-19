@@ -1,0 +1,8 @@
+#!/usr/bin/env -S mise tool-stub
+
+version = "2.12.0"
+
+[platforms.linux-x64]
+url = "https://github.com/Komet/MediaElch/releases/download/v2.12.0/MediaElch_linux_2.12.0_2024-10-13_git-8032465.AppImage"
+checksum = "blake3:c3ca4816df83ed98eaaa7a32258f32bc89aaeb886fc5a9931aba4c732bbc247f"
+size = 70395072 # 67.13 MiB

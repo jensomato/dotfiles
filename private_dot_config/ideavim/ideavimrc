@@ -1,0 +1,125 @@
+let mapleader=" "
+set number
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard=unnamed
+set scrolloff=10
+set relativenumber
+set showmode
+set surround
+set easymotion
+set commentary
+set highlightedyank
+set exchange
+set ReplaceWithRegister
+set idearefactormode=keep
+set ideajoin
+set argtextobj
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:EasyMotion_do_mapping=0
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+nmap <leader>ff <Action>(FindInPath)
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>su <Action>(ShowUsages)
+nmap <leader>cv <Action>(ChangeView)
+nmap <leader>rr <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>re <Action>(RenameElement)
+nmap <leader>* <Action>(HighlightUsagesInFile)
+nmap <leader>e <Action>(Switcher)
+nmap <leader>n <Action>(GotoClass)
+nmap <leader>N <Action>(GotoFile)
+nmap <leader>gg <Action>(FileStructurePopup)
+nmap <leader>d <Action>(GotoDeclaration)
+nmap <leader>id <Action>(QuickJavaDoc)
+nmap <leader>ip <Action>(ParameterInfo)
+nmap ge <Action>(ShowErrorDescription)
+nmap gi <Action>(GotoImplementation)
+nmap gs <Action>(GotoSuperMethod)
+nmap gt <Action>(GotoTypeDeclaration)
+nmap gl <Action>(AceLineIndentsAction)
+vmap gl <Plug>(easymotion-bd-jk)
+nmap gm <Action>(ShowBookmarks)
+nmap <leader>gi <Action>(ShowIntentionActions)
+nmap gp <Action>(ParameterInfo)
+nmap ghh <Action>(QuickJavaDoc)
+nmap ght <Action>(QuickTypeDefinition)
+nmap gco <Action>(OptimizeImports)
+nmap gcr <Action>(ReformatCode)
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+map n nzz
+map N Nzz
+map ghe <Action>(ExpressionTypeInfo)
+" nmap <leader><leader> <Action>(FileStructurePopup)
+nmap <leader><leader> <Plug>(easymotion-sn)
+map <leader>v :action Tool_External Tools_GVim<cr>
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+map <C-n> <Action>(GotoNextError)
+map <C-p> <Action>(GotoPreviousError)
+map <C-S-n> <Action>(VcsShowNextChangeMarker)
+map <C-S-p> <Action>(VcsShowPrevChangeMarker)
+map <C-s> <Action>(FileStructurePopup)
+map <C-f> <Action>(GotoFile)
+map <C-b> <Action>(Switcher)
+map <C-w> <Action>(CloseEditor)
+nmap <C-m> <Action>(ShowPopupMenu)
+nmap <C-S-m> <Action>(ToolWindowsGroup)
+//map tt <Plug>(easymotion-jumptoanywhere)
+map tt <Plug>(easymotion-lineanywhere)
+map s <Plug>(easymotion-sn)
+//map f <Plug>(easymotion-sl)
+nmap <leader>m <Action>(ToggleBookmarkWithMnemonic)
+map <S-Down> <Plug>(easymotion-j)
+map <C-Down> <Plug>(easymotion-j)
+map <S-Up> <Plug>(easymotion-k)
+map <C-Up> <Plug>(easymotion-k)
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+imap <C-n> <Action>(HippieCompletion)
+imap <C-p> <Action>(HippieBackwardCompletion)
+imap <C-t> <Action>(ParameterInfo)
+nmap <leader>i <Action>(Tool_External Tools_gvim)
+" nmap <leader><leader>i <Action>(Tool_External Tools_gvim-start)
+nmap <leader>ts mm`m:action GotoSymbol<CR>
+vmap <leader>s <Action>(SurroundWith)
+
+" don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+" highlight current word
+nmap h mZ*`Z
+
+nmap <C-Space> <Action>(EditorSelectWord)
+vmap <C-Space> <Action>(EditorSelectWord)
+
+let g:WhichKeyDesc_mering = "<leader>gd Diff & Merge"
+map <leader>gdr <Action>(Diff.MagicResolveConflicts)
+let g:WhichKeyDesc_diff_merge_resolve_conflicts = "<leader>gdr Resolve Conflicts"
+map <leader>gdn <Action>(NextDiff)
+let g:WhichKeyDesc_diff_merge_next_diff = "<leader>gdn Next Diff"
+map <leader>gdp <Action>(PreviousDiff)
+let g:WhichKeyDesc_diff_merge_previous_diff = "<leader>gdp Previous Diff"
+
+let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
+
+nnoremap cn *``cgn
+nnoremap cN *``cgN
+
+vnoremap <expr> cn g:mc . "``cgn"
+vnoremap <expr> cN g:mc . "``cgN"
+
+function! SetupCR()
+  nnoremap <Enter> :nnoremap <lt>Enter> n@z<CR>q:<C-u>let @z=strpart(@z,0,strlen(@z)-1)<CR>n@z
+endfunction
+
+nnoremap cq :call SetupCR()<CR>*``qz
+nnoremap cQ :call SetupCR()<CR>#``qz
+
+vnoremap <expr> cq ":\<C-u>call SetupCR()\<CR>" . "gv" . g:mc . "``qz"
+vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '?', 'g') . "``qz"

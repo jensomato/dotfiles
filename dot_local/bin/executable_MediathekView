@@ -1,0 +1,8 @@
+#!/usr/bin/env -S mise tool-stub
+
+version = "14.3.1"
+
+[platforms.linux-x64]
+url = "https://download.mediathekview.de/stabil/MediathekView-14.3.1-linux-x86_64.AppImage"
+checksum = "blake3:076c32de51b57529e2677f2290f587749355f5407e72cb78f318ffb2bea8f8ac"
+size = 136692928 # 130.36 MiB

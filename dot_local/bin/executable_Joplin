@@ -1,0 +1,8 @@
+#!/usr/bin/env -S mise tool-stub
+
+version = "3.4.12"
+
+[platforms.linux-x64]
+url = "https://github.com/laurent22/joplin/releases/download/v3.4.12/Joplin-3.4.12.AppImage"
+checksum = "blake3:879a995bb9cafd3b40e0a75e06467c844ae5d58e180166157c5d052cce5fc0b9"
+size = 154561716 # 147.40 MiB

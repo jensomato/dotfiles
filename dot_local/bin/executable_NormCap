@@ -1,0 +1,8 @@
+#!/usr/bin/env -S mise tool-stub
+
+version = "0.6.0"
+
+[platforms.linux-x64]
+url = "https://github.com/dynobo/normcap/releases/download/v0.6.0/NormCap-0.6.0-x86_64.AppImage"
+checksum = "blake3:c05ca680acf1cd9e01f91e2d8f47ddb273ba6be2a38608e7b7bffcc5e78a3821"
+size = 81787384 # 78.00 MiB
