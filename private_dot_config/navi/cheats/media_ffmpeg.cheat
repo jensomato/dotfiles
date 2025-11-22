@@ -1,8 +1,9 @@
 % media, video
 
 # add audio track to video
-ffmpeg -i <deutsch> -i <english> -c copy -map 1:v -map 0:a -map 1:a final.mp4
+ffmpeg -i <video> -i <deutsch> -i <english> -c copy -map 0:v -map 1:a -map 2:a -f $(file=$(basename <video>) ;echo "${file##*.}") <video>.final
 
+$ video: find . -print0 -type f -name "*.mp4" -o -name "*.avi" -o -name "*.mkv" -o -name "*.mov" -o -name "*.wmv" | xargs -0 printf '%q\n'
 $ deutsch: find . -print0 -type f -name "*.mp4" -o -name "*.avi" -o -name "*.mkv" -o -name "*.mov" -o -name "*.wmv" | xargs -0 printf '%q\n'
 $ english: find . -print0 -type f -name "*.mp4" -o -name "*.avi" -o -name "*.mkv" -o -name "*.mov" -o -name "*.wmv" | xargs -0 printf '%q\n'
 
