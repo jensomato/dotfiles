@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-set -eufo pipefail
-
-# packages.yaml hash: {{ include (joinPath .chezmoi.sourceDir ".chezmoidata/packages.yaml") | sha256sum }}
-{{ range .packages.linux.mise }}
-mise use --global {{ . }}
-{{ end }}

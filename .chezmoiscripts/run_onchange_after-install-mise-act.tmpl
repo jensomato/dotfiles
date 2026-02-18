@@ -1,5 +1,0 @@
-#!/bin/bash
-
-{{- $actBinary := output "mise" "which" "act" | trim }}
-# act hash: {{ include $actBinary | sha256sum }}
-{{ $actBinary }} --man-page > {{ .chezmoi.homeDir }}/.local/share/man/man1/act.1

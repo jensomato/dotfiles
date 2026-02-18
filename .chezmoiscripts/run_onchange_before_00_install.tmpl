@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# {{ include "private_dot_config/mise/mise.toml" | sha256sum }}
+
+mise plugins install --all --yes
+
+mise install
+
+# download man page
+mise_version=$(mise version -q | tail -1 | cut -f1 -d' ')
+mise_man_url="https://github.com/jdx/mise/raw/refs/tags/v$mise_version/man/man1/mise.1"
+curl -o "$HOME/.local/share/man/man1/mise.1" -L -s "$mise_man_url" > /dev/null 2>&1
+
+# generate zsh completion
+mise completion zsh > "$HOME/.config/zsh/completions/_mise"

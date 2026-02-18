@@ -1,0 +1,7 @@
+[tools]
+act = { version = "latest", postinstall = "act --man-page > $HOME/.local/share/man/man1/act.1" }
+aichat = "latest"
+navi = "latest"
+neovim = "latest"
+ollama = "latest"
+usage = "latest"

@@ -145,18 +145,6 @@
   url: "https://github.com/arkenfox/user.js/archive/refs/tags/140.0.zip"
   stripComponents: 1
   refreshPeriod: "168h"
-".local/bin/mise":
-  type: "file"
-  url: "https://github.com/jdx/mise/releases/download/v2025.9.10/mise-v2025.9.10-linux-x64"
-  executable: true
-  checksum:
-    sha256: "ab57ab710cf3e323a93431c8bb7ea31e58a0d12f385bcadd83d1d183cde16bf0"
-".local/share/man/man1/mise.1":
-  type: "file"
-  url: "https://github.com/jdx/mise/raw/refs/tags/v2025.9.10/man/man1/mise.1"
-".config/zsh/completions/_mise":
-  type: "file"
-  url: "https://github.com/jdx/mise/raw/refs/tags/v2025.9.10/completions/_mise"
 ".mozilla/native-messaging-hosts/passff.py":
   type: "file"
   url: "https://codeberg.org/PassFF/passff-host/releases/download/1.2.5/passff.py"
