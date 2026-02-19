@@ -98,6 +98,10 @@
   type: "git-repo"
   url: "https://github.com/jeffreytse/zsh-vi-mode.git"
   refreshPeriod: "168h"
+".config/zsh/zsh.d/zsh-vi-search.zsh":
+  type: "file"
+  url: "https://raw.githubusercontent.com/soheilpro/zsh-vi-search/refs/tags/{{ (gitHubLatestTag "soheilpro/zsh-vi-search").Name }}/src/zsh-vi-search.zsh"
+  refreshPeriod: "168h"
 ".config/zsh/plugins/powerlevel10k":
   type: "git-repo"
   url: "https://github.com/romkatv/powerlevel10k.git"
