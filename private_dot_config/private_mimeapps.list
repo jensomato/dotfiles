@@ -1,0 +1,15 @@
+[Added Associations]
+x-scheme-handler/mid=thunderbird.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+application/xml=org.gnome.gedit.desktop;
+
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop;
+x-scheme-handler/mid=thunderbird.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
+application/pdf=org.pwmt.zathura.desktop
+inode/directory=vifm.desktop

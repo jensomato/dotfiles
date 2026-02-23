@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+notify-send "$1"
+mid=${1#mail://}
+notify-send "mid=$mid"
+file=$(notmuch search --limit=1 --output=files "id:$mid")
+notify-send "file=$file"
+aerc :eml $file
+$HOME/.config/kitty/scripts/open-kitty-tab.sh mail

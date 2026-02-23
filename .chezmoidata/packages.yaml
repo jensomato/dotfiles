@@ -1,0 +1,17 @@
+packages:
+  linux:
+    debian:
+      apt:
+        - "git-delta"
+        - "ripgrep"
+        - "gh"
+        - "dex"
+        - "lazygit"
+    mise:
+      - "act"
+      - "aichat"
+      - "navi"
+      - "neovim"
+      - "ollama"
+      - "usage"
+

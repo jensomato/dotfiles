@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+NAME="chezmoi"
+URL="https://github.com/twpayne/chezmoi/releases/download/v2.60.0/chezmoi_2.60.0_linux_amd64.tar.gz"
+EXPECTED_SHA256="c8f6b93a4306d45d5700576db72ab39a0fdad1c0f6887e7b15c2b1fe735c8ee4"
+OUTPUT_DIR="$HOME/.local/thirdparty/$NAME"
+
+rm -rf "$OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"
+
+# Download and verify
+curl -fsSL "$URL" | tee >(sha256sum | awk '$1 == "'"$EXPECTED_SHA256"'" {exit}; {exit 1}')  | tar -xz -C "$OUTPUT_DIR"
+
+# Check exit status of the sha256sum verification
+if [[ $? -eq 0 ]]; then
+  echo "Download and verification successful.  File extracted to '$OUTPUT_DIR'."
+else
+  echo "SHA256 checksum verification failed."
+  exit 1
+fi

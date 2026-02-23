@@ -1,0 +1,20 @@
+[FolderNameFilter]
+folder_blacklist = mailbox_org/INBOX
+folder_transforms = mailbox_org/Junk:spam mailbox_org/Drafts:draft mailbox_org/Sent:sent mailbox_org/Trash:deleted mailbox_org/Archive:archive
+[Filter.2]
+message = tag sent messages from aerc
+query = folder:mailbox_org/Sent and not tag:sent
+tag = sent
+[Filter.1]
+message = remove new from sent, draft, deleted, archive and spam
+query = tag:sent or tag:draft or tag:deleted or tag:spam or tag:archive
+tags = -new
+[InboxFilter]
+[MailMover]
+folders = mailbox_org/Junk mailbox_org/Trash mailbox_org/INBOX mailbox_org/Archive
+rename = true
+max_age = 15
+mailbox_org/INBOX = 'not tag:inbox and tag:deleted':mailbox_org/Trash 'not tag:inbox and tag:spam':mailbox_org/Junk 'not tag:inbox and tag:archive':mailbox_org/Archive
+mailbox_org/Trash = 'not tag:deleted and tag:inbox':mailbox_org/INBOX 'not tag:deleted and tag:spam':mailbox_org/Junk 'not tag:deleted and tag:archive':mailbox_org/Archive
+mailbox_org/Junk = 'not tag:spam and tag:inbox':mailbox_org/INBOX 'not tag:spam and tag:deleted':mailbox_org/Trash 'not tag:spam and tag:archive':mailbox_org/Archive
+mailbox_org/Archive = 'not tag:archive and tag:inbox':mailbox_org/INBOX 'not tag:archive and tag:deleted':mailbox_org/Trash 'not tag:archive and tag:spam':mailbox_org/Junk

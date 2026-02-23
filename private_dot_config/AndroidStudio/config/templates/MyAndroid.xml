@@ -1,0 +1,21 @@
+<templateSet group="MyAndroid">
+  <template name="td" value="timber.log.Timber.d(&quot;$content$&quot;)" description="Timber.d()" toReformat="false" toShortenFQNames="true">
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANDROID_KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="te" value="timber.log.Timber.e($exception$, &quot;$content$&quot;)" description="Timber.e()" toReformat="false" toShortenFQNames="true">
+    <variable name="exception" expression="" defaultValue="&quot;e&quot;" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANDROID_KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ti" value="timber.log.Timber.i(&quot;$content$&quot;)" description="Timber.i()" toReformat="false" toShortenFQNames="true">
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ANDROID_KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

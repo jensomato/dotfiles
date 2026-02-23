@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+follow_window() {
+	i3-msg -t subscribe '[ "window" ]' &> /dev/null && i3-msg '[urgent="last"] focus' &> /dev/null
+}
+
+url="$1"
+url_encoded="$(jq -nr --arg input "$url" '$input|@uri')"
+containers="$(jq -r '.identities[] | select (.public) | .name' $HOME/.mozilla/firefox/default/containers.json 2> /dev/null | awk 'BEGIN{print ""} {print "firefox ("$0")"}')"
+containers="$(echo "$containers" | grep -vP '(tmp[0-9]+|null|%NEW.*)')"
+menu=$(printf "firefox temp$containers\nqutebrowser\nchromium\nbrave\ncopy to clipboard\nplay\nfreetube" | rofi -i -dmenu -p browser)
+
+case $menu in
+    "firefox temp")
+        #firefox "ext+container:name=%NEW_TEMP_CONTAINER%&url=$url_encoded" &
+        firefox "$url" &
+	follow_window
+       	;;
+    "firefox "*)
+        container=$(echo "$menu" | awk -F'[()]' '{print $2}')
+        firefox "ext+container:name=$container&url=$url_encoded" &
+	follow_window
+        ;;
+    "qutebrowser")
+        qutebrowser "$url" &
+        ;;
+    "chromium")
+        chromium "$url" &
+	follow_window
+        ;;
+    "copy to clipboard")
+        echo "$url" | xclip -r -selection clipboard
+        ;;
+    "play")
+        mpv "$url" &
+        ;;
+    "brave")
+        brave-browser "$url" &> /dev/null &
+	follow_window
+        ;;
+    "freetube")
+        freetube "$url" &> /dev/null &
+	follow_window
+        ;;
+esac

@@ -1,0 +1,13 @@
+gui:
+  timeFormat: '02.01.2006'
+  shortTimeFormat: '03:04'
+  theme:
+    activeBorderColor:
+      - red
+      - bold
+git:
+  paging:
+    colorArg: always
+    pager: delta --no-gitconfig --dark --paging=never --hyperlinks
+  notARepository: 'quit'
+  overrideGpg: true

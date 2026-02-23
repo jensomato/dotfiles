@@ -1,0 +1,4 @@
+*.java	diff=java
+*.kt	diff=kotlin
+*.md	diff=markdown
+*.sh	diff=bash

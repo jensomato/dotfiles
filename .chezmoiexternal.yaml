@@ -1,0 +1,155 @@
+".config/pipewire/librnnoise_ladspa.so":
+  type: "archive-file"
+  path: "linux-rnnoise/ladspa/librnnoise_ladspa.so"
+  url: "https://github.com/werman/noise-suppression-for-voice/releases/download/v1.10/linux-rnnoise.zip"
+".config/zsh/completions/_aichat":
+  type: "file"
+  url: "https://raw.githubusercontent.com/sigoden/aichat/refs/tags/v0.28.0/scripts/completions/aichat.zsh"
+".config/vim/pack/plugins/start/nordtheme-vim":
+  type: "git-repo"
+  url: "https://github.com/nordtheme/vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-peekaboo":
+  type: "git-repo"
+  url: "https://github.com/junegunn/vim-peekaboo.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/indentLine":
+  type: "git-repo"
+  url: "https://github.com/Yggdroot/indentLine.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vifm.vim":
+  type: "git-repo"
+  url: "https://github.com/vifm/vifm.vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-surround":
+  type: "git-repo"
+  url: "https://github.com/tpope/vim-surround.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/fzf.vim":
+  type: "git-repo"
+  url: "https://github.com/junegunn/fzf.vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/editorconfig-vim":
+  type: "git-repo"
+  url: "https://github.com/editorconfig/editorconfig-vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-repeat":
+  type: "git-repo"
+  url: "https://github.com/tpope/vim-repeat.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-sensible":
+  type: "git-repo"
+  url: "https://github.com/tpope/vim-sensible.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-gitgutter":
+  type: "git-repo"
+  url: "https://github.com/airblade/vim-gitgutter.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-easymotion":
+  type: "git-repo"
+  url: "https://github.com/easymotion/vim-easymotion.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/lightline.vim":
+  type: "git-repo"
+  url: "https://github.com/itchyny/lightline.vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-highlightedyank":
+  type: "git-repo"
+  url: "https://github.com/machakann/vim-highlightedyank.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/wiki.vim":
+  type: "git-repo"
+  url: "https://github.com/lervag/wiki.vim.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-numbertoggle":
+  type: "git-repo"
+  url: "https://github.com/jeffkreeftmeijer/vim-numbertoggle.git"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/supertab":
+  type: "git-repo"
+  url: "https://github.com/ervandew/supertab.git"
+  refreshPeriod: "168h"
+".config/vifm/favicon.vifm":
+  type: "archive-file"
+  url: "https://github.com/thimc/vifm_devicons/archive/refs/heads/master.zip"
+  path: "vifm_devicons-master/favicons.vifm"
+  refreshPeriod: "168h"
+".config/vifm/colors":
+  type: "archive"
+  url: "https://github.com/vifm/vifm-colors/archive/refs/heads/master.zip"
+  include:
+  - "*/*.vifm"
+  stripComponents: 1
+  refreshPeriod: "168h"
+".local/bin/rofi-pass":
+  type: "archive-file"
+  path: "rofi-pass-master/rofi-pass"
+  url: "https://github.com/carnager/rofi-pass/archive/refs/heads/master.zip"
+".local/thirdparty/i3blocks-contrib":
+  type: "git-repo"
+  url: "https://github.com/vivien/i3blocks-contrib.git"
+  refreshPeriod: "168h"
+".local/bin/todofi.sh":
+  type: "archive-file"
+  url: "https://github.com/hugokernel/todofi.sh/archive/refs/heads/master.zip"
+  path: "todofi.sh-master/todofi.sh"
+  refreshPeriod: "168h"
+".config/zsh/plugins/zsh-vi-mode":
+  type: "git-repo"
+  url: "https://github.com/jeffreytse/zsh-vi-mode.git"
+  refreshPeriod: "168h"
+".config/zsh/zsh.d/zsh-vi-search.zsh":
+  type: "file"
+  url: "https://raw.githubusercontent.com/soheilpro/zsh-vi-search/refs/tags/{{ (gitHubLatestTag "soheilpro/zsh-vi-search").Name }}/src/zsh-vi-search.zsh"
+  refreshPeriod: "168h"
+".config/zsh/plugins/powerlevel10k":
+  type: "git-repo"
+  url: "https://github.com/romkatv/powerlevel10k.git"
+  refreshPeriod: "168h"
+".local/bin/xprop2i3":
+  type: "archive-file"
+  url: "https://github.com/EvanCarroll/xprop2i3/archive/refs/heads/master.zip"
+  path: "xprop2i3-master/scripts/xprop2i3"
+  refreshPeriod: "168h"
+".local/bin/snippy":
+  type: "archive-file"
+  url: "https://github.com/BarbUk/snippy/archive/refs/heads/master.zip"
+  path: "snippy-master/snippy"
+  refreshPeriod: "168h"
+".local/bin/diff-so-fancy":
+  type: "file"
+  url: "https://github.com/so-fancy/diff-so-fancy/releases/download/v1.4.4/diff-so-fancy"
+  executable: true
+".local/thirdparty/todo-txt":
+  type: "archive"
+  url: "https://github.com/todotxt/todo.txt-cli/releases/download/v2.12.0/todo.txt_cli-2.12.0.zip"
+  stripComponents: 1
+".local/thirdparty/todotxt-more":
+  type: "git-repo"
+  url: "https://git.sr.ht/~proycon/todotxt-more"
+  refreshPeriod: "168h"
+".local/thirdparty/rofi-scripts":
+  type: "git-repo"
+  url: "https://github.com/davatorium/rofi-scripts.git"
+  refreshPeriod: "168h"
+".local/thirdparty/notify-send.sh":
+  type: "git-repo"
+  url: "https://github.com/vlevit/notify-send.sh.git"
+  refreshPeriod: "168h"
+".local/thirdparty/menu-calc":
+  type: "archive"
+  url: "https://github.com/sumnerevans/menu-calc/archive/v1.3.0.zip"
+  stripComponents: 1
+".local/thirdparty/menugen":
+  type: "git-repo"
+  url: "https://github.com/octotep/menugen.git"
+  refreshPeriod: "168h"
+".local/thirdparty/arkenfox":
+  type: "archive"
+  url: "https://github.com/arkenfox/user.js/archive/refs/tags/140.0.zip"
+  stripComponents: 1
+  refreshPeriod: "168h"
+".mozilla/native-messaging-hosts/passff.py":
+  type: "file"
+  url: "https://codeberg.org/PassFF/passff-host/releases/download/1.2.5/passff.py"
+  executable: true

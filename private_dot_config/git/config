@@ -1,0 +1,69 @@
+[include]
+	path = config.local
+[diff]
+        tool = vim
+	guitool = meld
+	submodule = log
+        algorithm = patience
+        indentHeuristic = true
+        colorMoved = default
+[difftool]
+	prompt = false
+[difftool "vim"]
+        # by default, Git runs vimdiff in read only mode. Make it run in read-write mode
+        cmd = "vim -f -d -c \"wincmd l\" -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\""
+[difftool "meld"]
+        cmd = "meld \"$LOCAL\" \"$REMOTE\" --label \"DIFF (ORIGINAL MY)\""
+[difftool "kitty"]
+	cmd = "kitten diff -o diff_cmd=git $LOCAL $REMOTE"
+[merge]
+	# tool = vim_mergetool
+        tool = vimdiff
+        guitool = meld
+
+        # Standard conflict markers include only ours and theirs side
+        # Use "diff3" to include base ancestor version as well
+        # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
+        conflictStyle = diff3
+[mergetool "meld"]
+        cmd = "meld --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\" --label \"MERGE (REMOTE BASE MY)\""
+	trustExitCode = false
+[mergetool "vimdiff"]
+	layout = "(LOCAL,BASE,REMOTE)/MERGED"
+	trustExitCode = false
+#[pager]
+#        diff = diff-so-fancy | less -n --tabs=1,5 -RFX --pattern '^(Date|added|deleted|modified): '
+#        show = diff-so-fancy | less -n --tabs=1,5 -RFX --pattern '^(Date|added|deleted|modified): '
+[commit]
+        gpgsign = true
+[core]
+        autocrlf = input
+	pager = delta
+[worktree]
+        guessRemote = true
+[alias]
+	d = difftool
+	st = status
+[pull]
+	ff = only
+[fetch]
+	prune = true
+[column]
+	status = auto
+[rerere]
+	enabled = true
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+[delta]
+	features = decorations
+	line-numbers = true
+[delta "interactive"]
+	keep-plus-minus-markers = false
+[delta "decorations"]
+	commit-decoration-style = blue ol
+	commit-style = raw
+	file-style = omit
+	hunk-header-decoration-style = blue box
+	hunk-header-file-style = red
+	hunk-header-line-number-style = "#067a00"
+	hunk-header-style = file line-number syntax

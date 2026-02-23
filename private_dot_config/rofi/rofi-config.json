@@ -1,0 +1,28 @@
+[
+	{
+		"name": "t - todo",
+		"command": "todofi.sh -c ~/work/dotfiles/.config/todofish/conf",
+		"icon": "test"
+	},
+	{
+		"name": "s - surfraw",
+		"command": "~/Downloads/menu-surfraw",
+		"icon": "test"
+	},
+	{
+		"name": "ta - add todo",
+		"command": "todofi.sh -a -c ~/work/dotfiles/.config/todofish/conf",
+		"icon": "test"
+	},
+	{
+		"name": "screenshot",
+		"command": "flameshot gui",
+		"icon": "test"
+	},
+	{
+		"name": "snippy",
+		"command": "snippy",
+		"icon": "test"
+	}
+
+]
