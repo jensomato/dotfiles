@@ -1,8 +1,8 @@
 #!/usr/bin/env -S mise tool-stub
 
-version = "0.23.12-beta"
+version = "0.23.13-beta"
 
 [platforms.linux-x64]
-url = "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.23.12-beta/freetube-0.23.12-beta-amd64.AppImage"
-checksum = "blake3:30bdfafd46daa7afc0477ef58ac2ab803f2db66b506eac3dc938431554f5154d"
+url = "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.23.13-beta/freetube-0.23.13-beta-amd64.AppImage"
+checksum = "blake3:c64003cc6a455d4ba846c5e7c0783064cf5034cf471328b42fb50d1d22e0569c"
 size = 99723768 # 95.10 MiB
