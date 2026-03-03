@@ -153,3 +153,7 @@
   type: "file"
   url: "https://codeberg.org/PassFF/passff-host/releases/download/1.2.5/passff.py"
   executable: true
+".local/share/themes/Nordic-Polar":
+  type: "archive"
+  stripComponents: 1
+  url: "https://github.com/EliverLara/Nordic/releases/download/v2.2.0/Nordic-Polar-standard-buttons.tar.xz"
