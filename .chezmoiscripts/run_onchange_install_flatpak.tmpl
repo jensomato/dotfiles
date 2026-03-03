@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -eufo pipefail
+
+# packages.yaml hash: {{ include (joinPath .chezmoi.sourceDir ".chezmoidata/packages.yaml") | sha256sum }}
+sudo flatpak install -y --or-update {{ range .packages.linux.flatpak }} {{ . }}{{ end }}

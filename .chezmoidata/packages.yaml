@@ -1,5 +1,7 @@
 packages:
   linux:
+    flatpak:
+      - "app.zen_browser.zen"
     debian:
       apt:
         - "git-delta"

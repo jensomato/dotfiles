@@ -1,0 +1,30 @@
+{{- $profileId := mozillaInstallHash "/app/zen" -}}
+{{- $profilePathDefault := joinPath .chezmoi.homeDir ".config" "zen" "profiles" "default" -}}
+{{- $profilePathPrivate := joinPath .chezmoi.homeDir ".config" "zen" "profiles" "private" -}}
+{{- $profilePathWork := joinPath .chezmoi.homeDir ".config" "zen" "profiles" "work" -}}
+
+[Profile0]
+Name=default
+IsRelative=0
+Path={{- $profilePathDefault }}
+Default=1
+
+[Profile1]
+Name=private
+IsRelative=0
+Path={{- $profilePathPrivate }}
+Default=0
+
+[Profile2]
+Name=work
+IsRelative=0
+Path={{- $profilePathWork }}
+Default=0
+
+[General]
+Version=2
+StartWithLastProfile=1
+
+[Install{{- $profileId -}}]
+Default={{- $profilePathDefault }}
+Locked=1
