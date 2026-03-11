@@ -26,7 +26,7 @@ super + shift + g
         rofi -show bookmark -modes "bookmark:$HOME/.local/scripts/rofi/rofibookmarks.sh $(ls -1 -t $BOOKMARKS_DIR/bookmarks/*.html | head -1)" -theme nord2 -kb-custom-1 "Ctrl+Return" -kb-accept-custom ""
 
 super + c
-	LC_NUMERIC=de_DE.UTF-8 rofi -plugin-path $XDG_CONFIG_HOME/rofi/plugins -show calc -modes calc -no-sort -no-show-match -theme calc.rasi -calc-command "echo -n '{result}' | xclip -i -selection clipboard"
+	LC_NUMERIC=de_DE.UTF-8 rofi -plugin-path $XDG_CONFIG_HOME/rofi/plugins -show calc -modes calc -reuse-result -terse -no-sort -no-show-match -theme calc.rasi -calc-command "echo -n '{result}' | xclip -i -selection clipboard"
 
 super + i
 	$HOME/.local/scripts/i3/i3menu.sh
@@ -59,7 +59,7 @@ super + m
 	i3-msg move scratchpad
 
 # show scratchpad terminal
-F12
+super + alt + ctrl + shift + F12
   ~/.local/scripts/i3/scratchpad_terminal.sh
 
 super + s
@@ -87,10 +87,6 @@ XF86MonBrightnessUp
 alt + Tab
 	rofi -show window
 
-# kill focused window
-super + shift + q
-	i3-msg kill
-
 # Scratchpadded Apps
 super + n
 	i3-msg '[con_mark="notes"] scratchpad show, move position center'
@@ -103,3 +99,34 @@ super + u
 
 super + l
 	$HOME/.local/scripts/i3/i3system.sh
+
+##
+## i3 config
+##
+
+# change focus
+super + {Left,Down,Up,Right}
+	i3-msg focus {left,down,up,right}
+
+# move focused window
+super + shift + {Left,Down,Up,Right}
+	i3-msg move {left,down,up,right}
+
+# switch to workspace
+super + alt + ctrl + {1-9,0}
+	i3-msg workspace $I3_WS{1-9,10}
+
+super + Tab
+	i3-msg workspace back_and_forth
+
+# move focused container to workspace
+super + alt + ctrl + shift + {1-9,0}
+	i3-msg move container to workspace $I3_WS{1-9,10}
+
+super + i
+	$HOME/.local/scripts/i3/i3menu.sh
+
+# kill focused window
+super + shift + q
+	i3-msg kill
+
