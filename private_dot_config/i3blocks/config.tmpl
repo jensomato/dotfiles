@@ -45,15 +45,17 @@ markup=none
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
+command=$SCRIPT_DIR/memory/memory
 label=MEM
 separator=false
 interval=30
 
-[memory]
-label=SWAP
-instance=swap
-separator=false
-interval=30
+#[memory]
+#command=$SCRIPT_DIR/memory/memory
+#label=SWAP
+#instance=swap
+#separator=false
+#interval=30
 
 # Disk usage
 #
@@ -61,6 +63,7 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
+command=$SCRIPT_DIR/disk/disk
 label=HOME
 #instance=/mnt/data
 interval=30
@@ -70,17 +73,20 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+command=$SCRIPT_DIR/iface/iface
 #instance=wlan0
 color=#00FF00
 interval=10
 separator=false
 
 [wifi]
+command=$SCRIPT_DIR/wifi/wifi
 #instance=wlp3s0
 interval=10
 separator=false
 
 [bandwidth]
+command=$SCRIPT_DIR/bandwidth/bandwidth
 #instance=eth0
 interval=5
 
@@ -89,6 +95,7 @@ interval=5
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
+command=$SCRIPT_DIR/cpu_usage/cpu_usage
 label=CPU
 interval=10
 min_width=CPU: 100.00%
@@ -108,6 +115,7 @@ interval=5
 #
 # The battery instance defaults to 0.
 [battery]
+command=$SCRIPT_DIR/battery/battery
 label=BAT
 #label=⚡
 #instance=1
@@ -158,6 +166,7 @@ interval=1
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [temperature]
+command=$SCRIPT_DIR/temperature/temperature
 label=TEMP
 interval=10
 
