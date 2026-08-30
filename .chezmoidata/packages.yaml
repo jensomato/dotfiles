@@ -1,7 +1,6 @@
 packages:
   linux:
     flatpak:
-      - "app.zen_browser.zen"
       - "io.freetubeapp.FreeTube"
     debian:
       apt:
@@ -10,6 +9,19 @@ packages:
         - "gh"
         - "dex"
         - "lazygit"
+        - "flatpak"
+        - "fzf"
+        - "sxhkd"
+        - "fonts-font-awesome"
+        - "pass"
+        - "pinentry-gnome3"
+        - "scdaemon"
+        - "vifm"
+        - "acpi"
+        - "xdotool"
+        - "unzip"
+        - "fonts-nerd-symbols"
+        - "lm-sensors"
     mise:
       - "act"
       - "aichat"

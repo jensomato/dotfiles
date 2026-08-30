@@ -2,4 +2,5 @@
 set -eufo pipefail
 
 # packages.yaml hash: {{ include (joinPath .chezmoi.sourceDir ".chezmoidata/packages.yaml") | sha256sum }}
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install -y --or-update {{ range .packages.linux.flatpak }} {{ . }}{{ end }}
