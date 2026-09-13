@@ -1,0 +1,185 @@
+[general]
+status_path = "~/.local/share/vdirsyncer/status/"
+
+[pair personal_addressbook]
+a = "personal_addr_remote"
+b = "personal_addr_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage personal_addr_local]
+type = "filesystem"
+path = "~/.local/share/addressbook/{{ .username }}/"
+fileext = ".vcf"
+
+[storage personal_addr_remote]
+type = "carddav"
+url = "https://nextcloud.{{ .intranet }}/remote.php/dav/addressbooks/users/{{ .username }}/contacts"
+username = "{{ .username }}"
+password.fetch = ["command", "pass", "show", "passphrase/default"]
+
+[pair personal_cal]
+a = "personal_cal_remote"
+b = "personal_cal_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage personal_cal_local]
+type = "filesystem"
+path = "~/.local/share/calendar/{{ .username }}/personal/"
+fileext = ".ics"
+
+[storage personal_cal_remote]
+type = "caldav"
+url = "https://nextcloud.{{ .intranet }}/remote.php/dav/calendars/{{ .username }}/personal"
+username = "{{ .username }}"
+password.fetch = ["command", "pass", "show", "passphrase/default"]
+
+[pair nons]
+a = "nons_remote"
+b = "nons_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage nons_local]
+type = "filesystem"
+path = "~/.local/share/calendar/{{ .username }}/nons/"
+fileext = ".ics"
+
+[storage nons_remote]
+type = "caldav"
+url = "https://nextcloud.{{ .intranet }}/remote.php/dav/calendars/{{ .username }}/nons"
+username = "{{ .username }}"
+password.fetch = ["command", "pass", "show", "passphrase/default"]
+
+[pair veranstaltungen]
+a = "veranstaltungen_remote"
+b = "veranstaltungen_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage veranstaltungen_local]
+type = "filesystem"
+path = "~/.local/share/calendar/{{ .username }}/veranstaltungen/"
+fileext = ".ics"
+
+[storage veranstaltungen_remote]
+type = "caldav"
+url = "https://nextcloud.{{ .intranet }}/remote.php/dav/calendars/{{ .username }}/veranstaltungen"
+username = "{{ .username }}"
+password.fetch = ["command", "pass", "show", "passphrase/default"]
+
+[pair geburtstage]
+a = "geburtstage_remote"
+b = "geburtstage_local"
+collections = null
+
+[storage geburtstage_local]
+type = "filesystem"
+path = "~/.local/share/calendar/{{ .username }}/geburtstage/"
+fileext = ".ics"
+
+[storage geburtstage_remote]
+type = "caldav"
+url = "https://nextcloud.{{ .intranet }}/remote.php/dav/calendars/{{ .username }}/contact_birthdays/"
+username = "{{ .username }}"
+password.fetch = ["command", "pass", "show", "passphrase/default"]
+
+[pair feiertage]
+a = "feiertage_cal_remote"
+b = "feiertage_cal_local"
+collections = null
+
+[storage feiertage_cal_local]
+type = "filesystem"
+path = "~/.local/share/calendar/feiertage"
+fileext = ".ics"
+
+[storage feiertage_cal_remote]
+type = "http"
+url = "https://www.feiertage-deutschland.de/kalender-download/ics/feiertage-deutschland.ics"
+
+[pair adaptiv_ak_finanzen]
+a = "adaptiv_ak_finanzen_remote"
+b = "adaptiv_ak_finanzen_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage adaptiv_ak_finanzen_local]
+type = "filesystem"
+path = "~/.local/share/calendar/adaptiv/ak-finanzen/"
+fileext = ".ics"
+
+[storage adaptiv_ak_finanzen_remote]
+type = "caldav"
+url = "https://nextcloud.adaptiv-frankfurt.de/remote.php/dav/calendars/{{ .adaptivUsername }}/ak-finanzen"
+username.fetch = ["shell", "pass show computer/adaptiv/services | grep user | cut -d: -f2"]
+password.fetch = ["shell", "pass show computer/adaptiv/services | head -1"]
+
+[pair adaptiv_adaptiv]
+a = "adaptiv_adaptiv_remote"
+b = "adaptiv_adaptiv_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage adaptiv_adaptiv_local]
+type = "filesystem"
+path = "~/.local/share/calendar/adaptiv/adaptiv/"
+fileext = ".ics"
+
+[storage adaptiv_adaptiv_remote]
+type = "caldav"
+url = "https://nextcloud.adaptiv-frankfurt.de/remote.php/dav/calendars/{{ .adaptivUsername }}/adaptiv"
+username.fetch = ["shell", "pass show computer/adaptiv/services | grep user | cut -d: -f2"]
+password.fetch = ["shell", "pass show computer/adaptiv/services | head -1"]
+
+[pair adaptiv_bg_aufsichtsrat]
+a = "adaptiv_bg_aufsichtsrat_remote"
+b = "adaptiv_bg_aufsichtsrat_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage adaptiv_bg_aufsichtsrat_local]
+type = "filesystem"
+path = "~/.local/share/calendar/adaptiv/bg-aufsichtsrat/"
+fileext = ".ics"
+
+[storage adaptiv_bg_aufsichtsrat_remote]
+type = "caldav"
+url = "https://nextcloud.adaptiv-frankfurt.de/remote.php/dav/calendars/{{ .adaptivUsername }}/aufsichtsrat-geno_shared_by_admin"
+username.fetch = ["shell", "pass show computer/adaptiv/services | grep user | cut -d: -f2"]
+password.fetch = ["shell", "pass show computer/adaptiv/services | head -1"]
+
+[pair adaptiv_bg_genossen]
+a = "adaptiv_bg_genossen_remote"
+b = "adaptiv_bg_genossen_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage adaptiv_bg_genossen_local]
+type = "filesystem"
+path = "~/.local/share/calendar/adaptiv/bg-genossen/"
+fileext = ".ics"
+
+[storage adaptiv_bg_genossen_remote]
+type = "caldav"
+url = "https://nextcloud.adaptiv-frankfurt.de/remote.php/dav/calendars/{{ .adaptivUsername }}/bg-genossen_shared_by_admin"
+username.fetch = ["shell", "pass show computer/adaptiv/services | grep user | cut -d: -f2"]
+password.fetch = ["shell", "pass show computer/adaptiv/services | head -1"]
+
+[pair adaptiv_sk_it]
+a = "adaptiv_sk_it_remote"
+b = "adaptiv_sk_it_local"
+collections = null
+conflict_resolution = "a wins"
+
+[storage adaptiv_sk_it_local]
+type = "filesystem"
+path = "~/.local/share/calendar/adaptiv/sk-it/"
+fileext = ".ics"
+
+[storage adaptiv_sk_it_remote]
+type = "caldav"
+url = "https://nextcloud.adaptiv-frankfurt.de/remote.php/dav/calendars/{{ .adaptivUsername }}/sk-it_shared_by_MichaelMeiners"
+username.fetch = ["shell", "pass show computer/adaptiv/services | grep user | cut -d: -f2"]
+password.fetch = ["shell", "pass show computer/adaptiv/services | head -1"]

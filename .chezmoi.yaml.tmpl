@@ -3,6 +3,8 @@
 {{ $gpgKeyId := promptString "gpgKeyId" -}}
 {{ $intranet := promptString "intranet" -}}
 {{ $aichatApiKey := promptString "aichatApiKey" -}}
+{{ $username := promptString "username" -}}
+{{ $adaptivUsername := promptString "adaptivUsername" -}}
 
 encryption: gpg
 gpg:
@@ -14,3 +16,5 @@ data:
   name: {{ $name | quote }}
   intranet: {{ $intranet | quote }}
   aichatApiKey: {{ $aichatApiKey | quote }}
+  username: {{ $username | quote }}
+  adaptivUsername: {{ $adaptivUsername | quote }}
