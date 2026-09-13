@@ -23,6 +23,7 @@ packages:
         - "fonts-nerd-symbols"
         - "lm-sensors"
         - "vdirsyncer"
+        - "khal"
     mise:
       - "act"
       - "aichat"

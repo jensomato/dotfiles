@@ -1,0 +1,57 @@
+[calendars]
+
+[[personal]]
+  path = "~/.local/share/calendar/{{ .username }}/personal/"
+  color = "#ebcb8b"
+
+[[veranstaltungen]]
+  path = "~/.local/share/calendar/{{ .username }}/veranstaltungen/"
+  color = "#bc5c91"
+
+[[nons]]
+  path = "~/.local/share/calendar/{{ .username }}/nons/"
+  color = "#7c31cc"
+
+[[geburtstage]]
+  path = "~/.local/share/calendar/{{ .username }}/geburtstage/"
+  color = "#b48ead"
+
+[[feiertage]]
+  path = "~/.local/share/calendar/feiertage/"
+  color = "#a3be8c"
+
+[[ak-finanzen]]
+  path = "~/.local/share/calendar/adaptiv/ak-finanzen"
+  color = "#8fbcbb"
+
+[[adaptiv]]
+  path = "~/.local/share/calendar/adaptiv/adaptiv"
+  color = "#8fbcbb"
+
+[[bg-aufsichtsrat]]
+  path = "~/.local/share/calendar/adaptiv/bg-aufsichtsrat"
+  color = "#8fbcbb"
+
+[[bg-genossen]]
+  path = "~/.local/share/calendar/adaptiv/bg-genossen"
+  color = "#8fbcbb"
+
+[[sk-it]]
+  path = "~/.local/share/calendar/adaptiv/sk-it"
+  color = "#8fbcbb"
+
+[default]
+  highlight_event_days = True
+  default_calendar = personal
+  timedelta = 7d
+
+[locale]
+  local_timezone = Europe/Berlin
+  default_timezone = Europe/Berlin
+  datetimeformat = %d.%m.%Y %H:%M
+  dateformat = %d.%m.%Y
+  timeformat = %H:%M
+  weeknumbers = left
+
+[view]
+  frame = color
