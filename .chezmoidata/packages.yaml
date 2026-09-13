@@ -24,6 +24,7 @@ packages:
         - "lm-sensors"
         - "vdirsyncer"
         - "khal"
+        - "khard"
     mise:
       - "act"
       - "aichat"
