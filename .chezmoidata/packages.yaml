@@ -25,6 +25,10 @@ packages:
         - "vdirsyncer"
         - "khal"
         - "khard"
+        - "imagemagick"
+        - "scrot"
+        - "i3lock"
+        - "x11-utils"
     mise:
       - "act"
       - "aichat"
