@@ -29,6 +29,7 @@ packages:
         - "scrot"
         - "i3lock"
         - "x11-utils"
+        - "picom"
     mise:
       - "act"
       - "aichat"

@@ -146,7 +146,7 @@ exec_always --no-startup-id \
   I3_WS10=$WS10 \
   sxhkd -c "$XDG_CONFIG_HOME/sxhkd/sxhkdrc" &
 exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/.local/share/wallpaper/night-city-pixel.png"
-exec --no-startup-id compton -b --backend xr_glx_hybrid --vsync-use-glfinish --vsync opengl --unredir-if-possible --paint-on-overlay
+exec --no-startup-id picom --config "$HOME/.config/picom/picom.conf" &
 exec --no-startup-id firefox --new-instance &
 exec --no-startup-id dex "$XDG_DATA_HOME/applications/signal-desktop.desktop" &
 exec --no-startup-id parcellite -n &
