@@ -30,6 +30,7 @@ packages:
         - "i3lock"
         - "x11-utils"
         - "picom"
+        - "normcap"
     mise:
       - "act"
       - "aichat"
