@@ -65,9 +65,13 @@
   type: "git-repo"
   url: "https://github.com/jeffkreeftmeijer/vim-numbertoggle.git"
   refreshPeriod: "168h"
-".config/vim/pack/plugins/start/supertab":
+".config/vim/pack/plugins/start/ultisips":
   type: "git-repo"
-  url: "https://github.com/ervandew/supertab.git"
+  url: "https://github.com/SirVer/ultisnips"
+  refreshPeriod: "168h"
+".config/vim/pack/plugins/start/vim-mucomplete":
+  type: "git-repo"
+  url: "https://codeberg.org/lifepillar/vim-mucomplete"
   refreshPeriod: "168h"
 ".config/vifm/favicon.vifm":
   type: "archive-file"

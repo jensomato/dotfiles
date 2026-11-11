@@ -172,3 +172,29 @@ endfunction
 
 nnoremap z= :call FzfSpell()<CR>
 inoremap <C-s> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+let g:mucomplete#no_mappings = 1
+
+function! s:tab_complete() abort
+  if pumvisible()
+    return "\<C-n>"
+  endif
+
+  if exists('*UltiSnips#CanExpandSnippet')
+        \ && UltiSnips#CanExpandSnippet()
+    return "\<C-R>=UltiSnips#ExpandSnippet()\<CR>"
+  endif
+
+  return mucomplete#tab_complete(1)
+endfunction
+
+inoremap <expr> <Tab> <SID>tab_complete()
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : mucomplete#tab_complete(-1)
+
+let g:UltiSnipsExpandTrigger = "<c-j>"        " Do not use <tab>
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"  " Do not use <c-j>
+
+let g:mucomplete#chains = {
+      \ 'default': ['path', 'omni', 'keyn', 'dict'],
+      \ }
+
